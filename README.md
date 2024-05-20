@@ -49,4 +49,5 @@ git reset . //tira todos os arquivos do 'lista' de commit
 ```
 git remote add "Nome-Repositorio-Remoto, por padrao origin" "URL" //vincula a pasta ja existente ao repositorio do URL colocado, linka diretamente a pasta-local-de-repositorio a um repositorio do git, aparentemente só precisa fazer isso na primeira vez na pasta
 git push -u origin main //envia o commit final para o repositorio do GitHub
+git pull //copia todas as modificaçoes realizadas online o GitHub para o Local da maquina
 ```
