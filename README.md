@@ -5,6 +5,7 @@ repositório dedicado para resumos e explicações do curso [Python AI Backend D
 ### • 📝 Documentação:
 - [Documentação Git](https://git-scm.com/doc)
 - [Documentação GitHub](https://docs.github.com/)
+- [Resumos em um Repositorio](https://github.com/elidianaandrade/dio-curso-git-github)
 ### • 💻 Comandos Relacionados
 #### •• Comandos basicos do cmd do Windows
 ```
@@ -45,7 +46,6 @@ git reset "Nome-do-Arquivo.extenção" //tira o arquivo do 'lista' de commit
 git reset . //tira todos os arquivos do 'lista' de commit
 ```
 #### •• Comandos para Linkar e manejar arquivos Local-GitHub
-
 ```
 git remote add "Nome-Repositorio-Remoto, por padrao origin" "URL" //vincula a pasta ja existente ao repositorio do URL colocado, linka diretamente a pasta-local-de-repositorio a um repositorio do git, aparentemente só precisa fazer isso na primeira vez na pasta
 git push -u origin main //envia o commit final para o repositorio do GitHub
@@ -55,6 +55,28 @@ git pull //copia todas as modificaçoes realizadas online o GitHub para o Local 
 Basicamente são ramificações para o projeto.
 Exemplo: podendo testar funcionalidades sem alterar a Branche principal(a main)
 
-Um exemplo visual do siginificadi de uma brench(no caso a brench teste)
-![Um exemplo visual do significado de uma brench](https://i.imgur.com/sLQJfIm.png)
-Ela esta "mandando" commits sem alterar a brench principal(main)
+Um exemplo visual do siginificado de uma branch(no caso a branch teste)
+![Um exemplo visual do significado de uma branch](https://i.imgur.com/sLQJfIm.png)
+Ela esta "mandando" commits sem alterar a branch principal(main)
+
+#### •• Comandos para Branchs
+```
+git checkout -b "Nome-para-a-branch" //cria uma branch local para fazer alterações sem mudar a main mantendo ela a salvo
+git branch "Nome-para-a-branch" //aparentemente tbm cria a branch
+git checkout "Nome-da-branch" //muda para branch colocada
+git branch //mostra todas as branchs que existem no momento, e deixa em destaque qual branch "você" se encontra obs.: se colocar '-v' depois da 'branch' aparece mais informações
+git merge "Nome-da-branch" //"envia" a branch para a branch que "você" esta
+git branch -d "Nome-da-branch" //deleta a branch criada
+```
+obs.: É recomendado nomear as branchs com [convenções de nome](https://gist.github.com/digitaljhelms/4287848)
+
+#### •• Conflitos para quando se trabalha com branchs
+Quando se trabalha com branchs e esta em equipe pode acontecer da haver conflitos na hora de enviar commits, como por exemplo alguem enviar algo que vc esta alterando e quando vc enviar ele ja vai ter alterado algo, entao vai dar um erro avisando o conflito de alterações:
+
+Quando der a mesagem de conflito o que é preiso fazer é dar 'git pull' para receber todas as alterações localmente porem quando receber essas alterações tera uma informação mostrando as alterações em conflito assim você pode escolher qual manter, dai é só enviar novamente após já ter dado 'git pull'.
+#### •• Comandos úteis
+```
+git clone "URL-repositório" --branch "Nome-da-branch" --sigle-branch //clona para o Local sómente a branch escolhida do repositório 
+```
+obs.: mais comandos em [no cap 3.](https://git-scm.com/book/en/v2).
+
