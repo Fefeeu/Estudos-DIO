@@ -6,7 +6,7 @@ repositório dedicado para resumos e explicações do curso [Python AI Backend D
 - [Documentação Git](https://git-scm.com/doc)
 - [Documentação GitHub](https://docs.github.com/)
 ### •💻Comandos Relacionados
-#### • Comandos basicos do cmd do Windows
+#### •• Comandos basicos do cmd do Windows
 ```
 mkdir "Nome-da-Pasta" //cria uma pasta pelo
 mkdir "nome-pasta/nome-pasta/.../Nome-da-Pasta" //cria uma pasta em um endereço especifico
@@ -18,7 +18,7 @@ cd "Nome-da-Pasta" //abre a pasta no cmd
 cd.. //retorna para a pasta anterior
 ls //lista todos os arquivos e pastas inclusive as ocultas
 ```
-#### • Comandos para "configurar" toda a pasta do git
+#### •• Comandos para "configurar" toda a pasta do git
 
 ```
 git init //transforma a pasta que esta aberta no cmd em um repositorio Git
@@ -27,7 +27,7 @@ cat config //informação sobre as configuraçoes do repositorio
 git clone "URL completo de um repositorio do GitHub" "Nome que quer dar para a pastado repositorio" //cria uma pasta de um repositorio git ja existente no pc, obs.: o nome do arquivo depois do URL é opcional, se nao só tera o nome padrao do repositorio
 git remote -v //mostra os repositorios que a pasta aberta esta conectada
 ```
-#### • Comandos para Commits Locais
+#### •• Comandos para Commits Locais
 
 ```
 git status //mostra os status da area de trabalho que estamos usandos
@@ -44,7 +44,8 @@ git reflog //da um log mais detalhado inclusive com os resets
 git reset "Nome-do-Arquivo.extenção" //tira o arquivo do 'lista' de commit 
 git reset . //tira todos os arquivos do 'lista' de commit
 ```
-#### • Comandos para Linkar e manejar arquivos Local-GitHub
+#### •• Comandos para Linkar e manejar arquivos Local-GitHub
+
 ```
 git remote add "Nome-Repositorio-Remoto, por padrao origin" "URL" //vincula a pasta ja existente ao repositorio do URL colocado, linka diretamente a pasta-local-de-repositorio a um repositorio do git, aparentemente só precisa fazer isso na primeira vez na pasta
 git push -u origin main //envia o commit final para o repositorio do GitHub
