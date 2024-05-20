@@ -52,6 +52,9 @@ git push -u origin main //envia o commit final para o repositorio do GitHub
 git pull //copia todas as modificaçoes realizadas online o GitHub para o Local da maquina
 ```
 ### • 💻 O que são Branches
-Basicamente são ramificações para o projeto
+Basicamente são ramificações para o projeto.
 Exemplo: podendo testar funcionalidades sem alterar a Branche principal(a main)
+
+Um exemplo visual do siginificadi de uma brench(no caso a brench teste)
 ![Um exemplo visual do significado de uma brench](https://i.imgur.com/sLQJfIm.png)
+Ela esta "mandando" commits sem alterar a brench principal(main)
