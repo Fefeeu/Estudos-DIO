@@ -2,10 +2,10 @@
 repositório dedicado para resumos e explicações do curso [Python AI Backend Developer](https://web.dio.me/track/coding-future-vivo-python-ai-backend-developer)
 
 ## Git e GitHub
-### •📝 Documentação:
+### • 📝 Documentação:
 - [Documentação Git](https://git-scm.com/doc)
 - [Documentação GitHub](https://docs.github.com/)
-### •💻Comandos Relacionados
+### • 💻 Comandos Relacionados
 #### •• Comandos basicos do cmd do Windows
 ```
 mkdir "Nome-da-Pasta" //cria uma pasta pelo
@@ -51,3 +51,7 @@ git remote add "Nome-Repositorio-Remoto, por padrao origin" "URL" //vincula a pa
 git push -u origin main //envia o commit final para o repositorio do GitHub
 git pull //copia todas as modificaçoes realizadas online o GitHub para o Local da maquina
 ```
+### • 💻 O que são Branches
+Basicamente são ramificações para o projeto
+Exemplo: podendo testar funcionalidades sem alterar a Branche principal(a main)
+![Um exemplo visual do significado de uma brench](https://i.imgur.com/sLQJfIm.png)
