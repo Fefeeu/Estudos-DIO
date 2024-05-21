@@ -80,7 +80,7 @@ git clone "URL-repositório" --branch "Nome-da-branch" --sigle-branch //clona pa
 ```
 obs.: mais comandos em [no cap 3.](https://git-scm.com/book/en/v2).
 
-# 🤝 Formas de Contribuir em um Projetp Open Source
+# 🤝 Formas de Contribuir em um Projeto Open Source
 ![barra do repositório do github](https://i.imgur.com/3ASLWxw.png)
 -**Issues:**
 	Uma forma de terceiros fazerem recomendações para alteral algo, corrigir problemas, fazer mudanças, etc..., podendo ser usadas também para quando alguém fazer uma 'Issue' alocar a uma pessoa expecifica para realiza-la.
