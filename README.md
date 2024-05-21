@@ -51,7 +51,7 @@ git remote add "Nome-Repositorio-Remoto, por padrao origin" "URL" //vincula a pa
 git push -u origin main //envia o commit final para o repositorio do GitHub
 git pull //copia todas as modificaçoes realizadas online o GitHub para o Local da maquina
 ```
-### • 💻 O que são Branches
+### • 🌿 O que são Branches
 Basicamente são ramificações para o projeto.
 Exemplo: podendo testar funcionalidades sem alterar a Branche principal(a main)
 
@@ -80,3 +80,10 @@ git clone "URL-repositório" --branch "Nome-da-branch" --sigle-branch //clona pa
 ```
 obs.: mais comandos em [no cap 3.](https://git-scm.com/book/en/v2).
 
+## 🤝 Formas de Contribuir em um Projetp Open Source
+![barra do repositório do github](https://i.imgur.com/3ASLWxw.png)
+-**Issues:**
+	Uma forma de terceiros fazerem recomendações para alteral algo, corrigir problemas, fazer mudanças, etc..., podendo ser usadas também para quando alguém fazer uma 'Issue' alocar a uma pessoa expecifica para realiza-la.
+ 
+ -**Pull Requests:**
+ 	Uma forma de pessoas que ja sabem alguma forma de realizar as mesmas coisas dos Issues, porem ela já sabe como realizar, então ela faz um request ja com a solução do "problema", assim podendo alterar de maneira mais fácil o repositório.
