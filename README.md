@@ -48,8 +48,11 @@ git reset . //tira todos os arquivos do 'lista' de commit
 #### •• Comandos para Linkar e manejar arquivos Local-GitHub
 ```
 git remote add "Nome-Repositorio-Remoto, por padrao origin" "URL" //vincula a pasta ja existente ao repositorio do URL colocado, linka diretamente a pasta-local-de-repositorio a um repositorio do git, aparentemente só precisa fazer isso na primeira vez na pasta
+git remote add upstream "URL" //upstream é só um outro nome padrao para simbolizar que esta linkado a um repositorio de outra pessoa, simboliza o fork
+git remote -v //mostra a lista de todos os repositórios que tem linkado
 git push -u origin main //envia o commit final para o repositorio do GitHub
 git pull //copia todas as modificaçoes realizadas online o GitHub para o Local da maquina
+git pull "nome-do-link" "nome-da-branch" //puxa o repositorio da 'origin', 'upstream', etc, ou seja um local expecifico que vc queira puxar e da branch expecifica que queira puxar exemplo a 'main' 
 ```
 ### • 🌿 O que são Branches
 Basicamente são ramificações para o projeto.
