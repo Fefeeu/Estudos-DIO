@@ -20,6 +20,7 @@ Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 | [🛑 Estruturas Condicionais](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-condicionais)  |
 | [🔁 Estruturas de Repetição](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-de-repetição)  |
 | [✏️ Strign](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-strign)  |
+| [📃 List](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-list) |
 | []() |
 
 ## 🚪 Inputs
