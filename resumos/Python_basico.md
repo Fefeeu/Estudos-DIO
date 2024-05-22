@@ -4,7 +4,7 @@ Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 ## 📝 Documentação 
 - [Sintaxes](https://pythoniluminado.netlify.app/sintaxe)
 
-## Inputs
+## 🚪 Inputs
 ```python
 x = input()       #input padrão qualquer
 
@@ -17,7 +17,7 @@ x, y, z = input().split()       #input com multiplas variaveis
 int(x)            #converte a variavel para o tipo que deseja nesse caso 'int'
 ```
 
-## Manipulação de Print
+## ✏️ Manipulação de Print
 ```python
 print(nome, idade) #a separação por virgulas faz com que retorne diferentes variaveis
 
@@ -31,7 +31,7 @@ print(x, y, z, sep = "o que quiser")    #faz com que a separação das variaveis
 print(x, y, z, end = "o que quiser")  #faz com que o final do print seja o que voce quiser, por padrão é "/n"
 ```
 
-## Operadores Aritiméticos
+## 🔢 Operadores Aritiméticos
 ```python
 #em:
 x = 10
@@ -58,7 +58,7 @@ print(x % y)    #resto da divisão
 # 5
 ```
 
-## Operadores de Comparação
+## ❔ Operadores de Comparação
 ```python
 #em:
 x = 10
@@ -82,7 +82,7 @@ print(x <= y)   #x menor ou igual que y?
 # False
 ```
 
-## Operadores de Atribuição
+## 🟰 Operadores de Atribuição
 ```python
 x = y   #x recebe o valor de y
 
@@ -101,7 +101,7 @@ x //= y #x recebe o valor de x // y
 x %= y  #x recebe o valor de x % y
 ```
 
-## Operadores Lógicos 
+## ❔ Operadores Lógicos 
 ```python
 x > y and x == y    #comparação onde as duas tem que ser verdadeiras, é o valor logico 'e'
 
@@ -110,7 +110,7 @@ x > y or x == y     #comparação onde uma tem que ser verdadeiras, é o valor l
 not x > y           #inverte o valor, exemplo se fosse True retorna False e se for False retorn True
 ```
 
-## Operadores de Identidade
+## 🧠 Operadores de Identidade
 São operadores utilizados para comparar se os dois objetos testados ocupam a mesma posição na memória
 ```python
 #em:
@@ -128,7 +128,7 @@ print(valor_x is valor_y)      #verifica se oculpam a mesma região de memória
 # True
 ```
 
-## Operadores de Assosiação
+## 🔍 Operadores de Assosiação
 São operadores utilizados para verificar se um objeto está presente em uma sequência.
 ```python
 #em:
@@ -149,7 +149,7 @@ print(200 in valores)       #verifica se o valor '200' está presente na lista d
 # False
 ```
  
-## Estruturas Condicionais
+## 🛑 Estruturas Condicionais
 - Condições "se" "se não se" "se não"
 ```python
 if (Condição Lógica):   #obs.: não é preciso os parenteses
@@ -172,7 +172,7 @@ else:
 x "Suecesso" if (saldo >= saque) else "falha"   #define em uma unica linha os possiveis valores da variavel
 ```
 
-## Estruturas de Repetição
+## 🔁 Estruturas de Repetição
 - **For**
 
 Repete até a condição de parada/limite
@@ -224,7 +224,7 @@ else:   #mesma coisa do for: else:
         print(i, end = " ")
 ```
 
-## Strign
+## ✏️ Strign
 - **Manipulação de Caracteres**
 ```python
 curso = "pYtHon"
