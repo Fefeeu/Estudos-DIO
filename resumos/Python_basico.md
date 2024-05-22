@@ -322,3 +322,91 @@ print("""
     ##########################
 """) 
 ```
+## 📃 List
+Lista como o próprio nome ja explica são lista de variaveis, podendo inclusive diferentemente de outras linguagens terem mais de um tipo de variavel na mesma list, mas são baicamente vetores infinitos.
+```python
+frutas["Laranja", "Uva", "Banana"]  #list de strings
+
+frutas[]    #list vasia
+
+letras = list("python") #uma lista dada letra por letra
+
+numeros = list(range(10))   #uma lista de numeros dada numero por numero de 0 a 10-1
+
+carro = ["Ferrari", "F8", 2020, 2900.82, "São Paulo", True]   #list de diferentes variaveis
+
+#exemplo de print
+print(carro)   #vai retornar item por item da list
+```
+Para "buscar" um item na list é só entregar sua posicao
+```python
+frutas["Laranja", "Uva", "Banana", "Pera", "Kiwi"]
+
+print(frutas[2])
+    # Banana
+
+print(frutas[-1])   #se o valor de posicao for negativo então ele ira buscar apartir do final
+    # Kiwi
+```
+**Lista Aninhadas**
+
+são lists de lists ou seja matriz
+```python
+matriz = [
+    [1, "a", 2],
+    ["b", 3, 4],
+    [6, 5, "c"]
+]              #pode ser na mesma linha
+
+print(matriz[0])    #retorna a list dessa posicao
+    # [1, "a", 2]
+
+print(matriz[0][0]) #retorna a posica da list na posicao da list
+    # 1
+
+print(matriz[0][-1])
+    # 2
+
+print(matriz[-1][-1])
+    # c
+
+```
+
+**Repartições**
+```python
+lista = ["p", "y", "t", "h", "o", "n"]
+
+print(lista[2:])    #pega do elemento da posicao 2 para frente
+    # ["t", "h", "o", "n"]
+
+print(lista[:2])    #pega todos os elementos até a posicao 2-1
+    # ["p", "y"]
+
+print(lista[1:3])   #pega todos os elementos da posicao 1 até a posicao 3-1
+    # ["y", "t"]
+
+print(lista[:3:2]) #pega todos os elementos da posicao 0 até 3-1 porem pegando 1 de 2 em 2
+    # ["p", "t"]
+
+print(lista[::])    #pega todos os elementos
+    # ["p", "y", "t", "h", "o", "n"]
+
+print(lista[::-1])  #pega todos os elementos porem invertida
+    # ["n", "o", "h", "t", "y", "p"]
+```
+**Navegando Pela List**
+
+Tem como navegar da maneira padrão porem a uma melhor em python
+```python
+carros = ["gol", "celra", "palio"]
+
+for car in carros:
+    print(car)    #vai retornar carro por carro
+
+for indice, car in enumerate(carros):
+    print(f"{indice}: {car}")        #retorna a posicao do carro e o carro
+```
+**Compressão de List**
+```python
+
+```
