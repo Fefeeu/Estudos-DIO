@@ -2,6 +2,10 @@
 # 🐍 Python
 Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 
+## 📝 Documentação 
+- [Sintaxes](https://pythoniluminado.netlify.app/sintaxe)
+- [Repositório DIO](https://github.com/digitalinnovationone/trilha-python-dio)
+
 ## Sumário
 |               | 
 | ------------- | 
@@ -17,9 +21,6 @@ Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 | [🔁 Estruturas de Repetição](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-de-repetição)  |
 | [✏️ Strign](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-strign)  |
 | []() |
-
-## 📝 Documentação 
-- [Sintaxes](https://pythoniluminado.netlify.app/sintaxe)
 
 ## 🚪 Inputs
 ```python
