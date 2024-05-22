@@ -1,6 +1,23 @@
 
 # 🐍 Python
 Area dedicada a comandos, sintexes, utilidades, etc. Do Python
+
+## Sumário
+|               | 
+| ------------- | 
+| [🚪 Inputs](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-inputs)  | 
+| [✏️ Manipulação de Print](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-manipulação-de-print)  |
+| [🔢 Operadores Aritiméticos](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-operadores-aritiméticos)  |
+| [❔ Operadores de Comparação](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-operadores-de-comparação)  |
+| [🟰 Operadores de Atribuição](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-operadores-de-atribuição)  |
+| [❔ Operadores Lógicos](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-operadores-lógicos)  |
+| [🧠 Operadores de Identidade](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-operadores-de-identidade)  |
+| [🔍 Operadores de Assosiação](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-operadores-de-assosiação)  |
+| [🛑 Estruturas Condicionais](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-condicionais)  |
+| [🔁 Estruturas de Repetição](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-de-repetição)  |
+| [✏️ Strign](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-strign)  |
+| []() |
+
 ## 📝 Documentação 
 - [Sintaxes](https://pythoniluminado.netlify.app/sintaxe)
 
