@@ -1,4 +1,4 @@
-# Git e GitHub
+# 🐈‍⬛ Git e GitHub
 ## • 📝 Documentação:
 - [Documentação Git](https://git-scm.com/doc)
 - [Documentação GitHub](https://docs.github.com/)

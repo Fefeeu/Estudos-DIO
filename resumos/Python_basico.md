@@ -1,4 +1,9 @@
 
+# 🐍 Python
+Area dedicada a comandos, sintexes, utilidades, etc. Do Python
+## 📝 Documentação 
+- [Sintaxes](https://pythoniluminado.netlify.app/sintaxe)
+
 ## Inputs
 ```python
 x = input()       #input padrão qualquer
