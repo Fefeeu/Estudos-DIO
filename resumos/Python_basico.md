@@ -3,7 +3,7 @@
 Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 
 ## 📝 Documentação 
-- [Sintaxes](https://pythoniluminado.netlify.app/sintaxe)
+-  sintaxes](https://pythoniluminado.netlify.app sintaxe)
 - [Repositório DIO](https://github.com/digitalinnovationone/trilha-python-dio)
 
 ## Sumário
@@ -244,7 +244,7 @@ else:   #mesma coisa do for: else:
 ```
 
 ## ✏️ Strign
-- **Sintaxes**
+- * sintaxes**
 
 ```python
 palavra = "exemplo"
@@ -555,12 +555,30 @@ print(lista)
 
 
 lista = ["python", "C++", "js", "java", "csharp"]
-lista.sort()
+lista.sort(key=lambda x: len(x))    #ordena por tamanho de string
 print(lista)
-
+# ['js', 'C++', 'java', 'python', 'csharp']
 
 lista = ["python", "C++", "js", "java", "csharp"]
-lista.sort()
+lista.sort(key=lambda x: len(x), reverse=True)  #ordena de maneira inversa ao tamanho da string
 print(lista)
+# ['python', 'csharp', 'java', 'C++', 'js']
+```
+- **len()**
 
+Essa sintaxe é utilizada para retornar o tamanho da lista
+```python
+lista = ["python", "C++", "js", "java", "csharp"]
+print(len(lista))
+# 5
+```
+- **sorted()**
+
+Essa sintaxe é basicamente o mesmo que o [].sort() porem nesse caso ela é uma função padrão do próprio python, então não a muitos motivos para utiliza-la
+```python
+lista = ["python", "C++", "js", "java", "csharp"]
+
+sorted(lista, key=lambda x: len(x)) #organiza a lista
+
+sorted(lista, key=lambda x: len(x), reverse=True)   #organiza a lista porem invertida 
 ```
