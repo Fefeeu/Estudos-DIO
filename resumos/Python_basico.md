@@ -20,7 +20,7 @@ Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 | [🛑 Estruturas Condicionais](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-condicionais)  |
 | [🔁 Estruturas de Repetição](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-de-repetição)  |
 | [✏️ Strign](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-strign)  |
-| [📃 List](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-list) |
+| [📃 Lista](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-lista) |
 | []() |
 
 ## 🚪 Inputs
@@ -244,6 +244,15 @@ else:   #mesma coisa do for: else:
 ```
 
 ## ✏️ Strign
+- **Sintaxes**
+
+```python
+palavra = "exemplo"
+
+len(palavra)    #retorna o tamanho da string
+# 7
+```
+
 - **Manipulação de Caracteres**
 ```python
 curso = "pYtHon"
@@ -323,23 +332,23 @@ print("""
     ##########################
 """) 
 ```
-## 📃 List
-Lista como o próprio nome ja explica são lista de variaveis, podendo inclusive diferentemente de outras linguagens terem mais de um tipo de variavel na mesma list, mas são baicamente vetores infinitos.
+## 📃 Lista
+lista como o próprio nome ja explica são lista de variaveis, podendo inclusive diferentemente de outras linguagens terem mais de um tipo de variavel na mesma lista, mas são baicamente vetores infinitos.
 ```python
-frutas["Laranja", "Uva", "Banana"]  #list de strings
+frutas["Laranja", "Uva", "Banana"]  #lista de strings
 
-frutas[]    #list vasia
+frutas[]    #lista vasia
 
-letras = list("python") #uma lista dada letra por letra
+letras = lista("python") #uma lista dada letra por letra
 
-numeros = list(range(10))   #uma lista de numeros dada numero por numero de 0 a 10-1
+numeros = lista(range(10))   #uma lista de numeros dada numero por numero de 0 a 10-1
 
-carro = ["Ferrari", "F8", 2020, 2900.82, "São Paulo", True]   #list de diferentes variaveis
+carro = ["Ferrari", "F8", 2020, 2900.82, "São Paulo", True]   #lista de diferentes variaveis
 
 #exemplo de print
-print(carro)   #vai retornar item por item da list
+print(carro)   #vai retornar item por item da lista
 ```
-Para "buscar" um item na list é só entregar sua posicao
+Para "buscar" um item na lista é só entregar sua posicao
 ```python
 frutas["Laranja", "Uva", "Banana", "Pera", "Kiwi"]
 
@@ -349,9 +358,9 @@ print(frutas[2])
 print(frutas[-1])   #se o valor de posicao for negativo então ele ira buscar apartir do final
     # Kiwi
 ```
-**Lista Aninhadas**
+**lista Aninhadas**
 
-são lists de lists ou seja matriz
+são listas de listas ou seja matriz
 ```python
 matriz = [
     [1, "a", 2],
@@ -359,10 +368,10 @@ matriz = [
     [6, 5, "c"]
 ]              #pode ser na mesma linha
 
-print(matriz[0])    #retorna a list dessa posicao
+print(matriz[0])    #retorna a lista dessa posicao
     # [1, "a", 2]
 
-print(matriz[0][0]) #retorna a posica da list na posicao da list
+print(matriz[0][0]) #retorna a posica da lista na posicao da lista
     # 1
 
 print(matriz[0][-1])
@@ -395,7 +404,7 @@ print(lista[::])    #pega todos os elementos
 print(lista[::-1])  #pega todos os elementos porem invertida
     # ["n", "o", "h", "t", "y", "p"]
 ```
-**Navegando Pela List**
+**Navegando Pela Lista**
 
 Tem como navegar da maneira padrão porem a uma melhor em python
 ```python
@@ -407,7 +416,151 @@ for car in carros:
 for indice, car in enumerate(carros):
     print(f"{indice}: {car}")        #retorna a posicao do carro e o carro
 ```
-**Compressão de List**
+**Compressão de Lista**
+
+
+Criar uma lista baseada em outra lista já pré existente, basicamente uma sublista
 ```python
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+pares = []
+quadrados = []
+
+for num in numeros:
+    if num % 2 == 0: 
+        pares.append(numero)
+
+for num in numeros:
+    quadrados.append(num ** 2)
+```
+ou no metodo comprehension
+```python
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+pares = []
+quadrados =[]
+
+pares = [num for num in numeros if (num % 2 == 0)]  #para fazer uma sublista
+
+quadrados = [num ** 2 for num in numeros]   #para fazer uma lista baseada em uma outra lista
+```
+
+### Metodos de usos de lista
+- **[].append**
+
+- **[].clear()**
+
+Essas são as sintaxes utilizadas para respectivamente adicionar valores a uma lista vasia e retirar todos os valores da lista
+```python
+lista = []
+
+lista.append(1)
+lista.append("python")
+lista.append([40, 30, 20, 10, 0])
+
+print(lista)
+# [1, "python", [40, 30, 20, 10, 0]]
+
+lista.clear()
+
+print(lista)
+# []
+```
+- **[].copy()**
+
+Essa sintaxe é utilizada para copiar uma lista para outra porem ambas estarão ocupando espaços diferentes de memória, ou seja apesar de serem iguais serão objetos diferentes
+```python
+lista = [1, "python", [40, 30, 20, 10, 0]]
+
+l2 = lista.copy()
+
+print(l2)   #apesar de retornarem valores 100% iguais eles são objetos diferentes 
+# [1, "python", [40, 30, 20, 10, 0]]
+``` 
+Esse caso deve ser muito utilizado para quando vai-se mudar uma lista em uma função mas ainda quer manter seus valores anteriores, ou seja como exemplo (se eu alterar o '1' por '2' na 'l2' na 'lista' se mantera a ser '1') e vice-verssa
+- **[].count()**
+
+Essa sintaxe é utilizada para contar quantas vezes são repetidos o valor informado
+```python
+cores = ["azul", "verde", "azul", "amarelo"]
+
+print(cores.count("azul"))
+# 2
+```
+- **[].extend()**
+
+Essa sintaxe é utilizada para mesclar duas listas em uma
+```python
+lista = ["python", "C++", "js"]
+outras_lista = ["java", "csharp"]
+
+lista.extend(outras_lista)    #pode ser com uma lista ja existente
+print(lista)
+# ["python", "C++", "js", "java", "csharp"]
+
+lista.extend(["java", "csharp"])   #mesmo caso que o anterior porem sem ser com uma lista pronta e sim com uma declarada na hora
+print(lista)
+# ["python", "C++", "js", "java", "csharp"]
+``` 
+- **[].index()**
+
+Essa sintaxe é utilizada para busca em qual posição é encontrado o PRIMEIRO valor na lista
+```python
+lista = ["python", "C++", "js", "java", "csharp"]
+
+print(lista.index("java"))
+# 3
+```
+- **[].pop()**
+Essa sintaxe é utilizada para retirar valores da lista, nesse caso é retirado em formato de pilha ou seja retira o ultimo valor colocado
+```python
+lista = ["python", "C++", "js", "java", "csharp"]
+
+lista.pop()    #retira "csharp"
+lista.pop()    #retira "java"
+lista.pop(1)   #retira "C++"
+```
+
+- **[].remove()**
+
+Essa sintaxe é utilazada para remove o primeiro elemento que seja igual ao pedido
+```python
+lista = ["python", "C++", "js", "java", "C++", "csharp"]
+
+lista.remove("C++")    #remove o primeiro "c++"
+print(lista)
+# ["python", "js", "java", "C++", "csharp"]
+```
+- **[].reverse**
+
+Essa sintaxe é utilizada para inverter a lista
+```python
+lista = ["python", "C++", "js", "java", "csharp"]
+
+lista.reverse()
+print(lista)
+# ["csharp", "java", "js", "C++", "python"]
+```
+- **[].sort**
+
+Essa sintaxe é utilizada para organizar a lista, obs.: se forem strings sera ordenada em ordem alfabetica
+```python
+lista = ["python", "C++", "js", "java", "csharp"]
+lista.sort()    #ordena a lista em ordem padrao
+print(lista)
+# ["C++", "csharp", "java", "js", "python"]
+
+lista = ["python", "C++", "js", "java", "csharp"]
+lista.sort(reverse = True)  #ordena a lista invertida a ordem padrao
+print(lista)
+# ["python", "js", "java", "csharp", "C++"]
+
+
+lista = ["python", "C++", "js", "java", "csharp"]
+lista.sort()
+print(lista)
+
+
+lista = ["python", "C++", "js", "java", "csharp"]
+lista.sort()
+print(lista)
 
 ```
