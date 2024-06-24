@@ -582,7 +582,7 @@ sorted(lista, key=lambda x: len(x)) #organiza a lista
 
 sorted(lista, key=lambda x: len(x), reverse=True)   #organiza a lista porem invertida 
 ```
-#### Tuplas
+## 📄 Tuplas
 Tuplas são estruturas de dados muito parecidas com as listas, mas a diferença entre elas é que são imutaveis, portanto quando criada não há como alteralas. 
 
 A forma de criação de uma Tupla é quase igual a de uma lista, a unica diferença em uma das formas de criação dela é que listas é criada com [] enquanto a tupla é criada com ().
@@ -649,7 +649,7 @@ cores = ("Azul", "Vermelho", "Verde", "Azul", "Amarelo",)
 len(cores)  # 5     
 ```
 
-#### Conjuntos
+## 🪢 Conjuntos
 
 Um 'set' é uma coleção que não possue objetos repetidos, usada para representar conjuntos matemáticos e para retirar item repetidos de um interável.
 
@@ -834,7 +834,7 @@ nums    # {2, 3, 4, 5, 6}
 nums.remove(45)    # da erro
 ```
 
-#### Dicionários
+## 🖇️ Dicionários
 
 Um metodo de organização onde são utilizados pares de informações, onde há uma chave e um valor, e assim como a Tupla os valores são das chaves imutáveis, porem os valores podem ser mutaveis
 
@@ -871,10 +871,131 @@ pessoa  # "nome":"Mica", "idade":44, "sexo":"Feminino"
 Dicionários dessa forma são basicamente dicionários, dentro de outros dicionários
 ```Python
 contatos = {
-" guilherme@gmail.com ": {"nome": "Guilherme", "telefone": "3333-2221"},
-" giovanna@gmail.com ": {"nome": "Giovanna", "telefone": "3443-2121"},
-" chappie@gmail.com ": {"nome": "Chappie", "telefone": "3344-9871"},
-" melaine@gmail.com ": {"nome": "Melaine", "telefone": "3333-7766"},
+"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+"chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+"melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
 }
+
+contatos["guilherme@gmail.com"]["nome"] #Guilherme
 ```
 
+Interando um Dicionário
+```Python
+contatos = {
+"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+"chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+"melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+for chave in contatos   # maneira "errada" de se fazer
+    print(chave, contatos[chave])
+
+for chave, valor in contatos.items()    # maneira "correta" de se interar um dict
+    print(chave, valor)
+    # "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
+    # "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"}
+    # "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"}
+    # "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"}
+
+#obs.: os 2 for possuem a mesma saida
+
+```
+
+**{}.clear**
+
+Metodo padrão, somente limpa o dict
+```Python
+pessoa = {"nome":"Felipe", "idade":19, "sexo":"Masculino"}
+
+pessoa.clear()
+pessoa  # {}
+```
+
+**{}.copy**
+
+Copia diretamente um dicionario para outro
+```Python
+pessoa = {"nome":"Felipe", "idade":19, "sexo":"Masculino"}
+
+pessoa_copia = pessoa.copy()
+
+pessoa_copia    # {"nome":"Felipe", "idade":19, "sexo":"Masculino"}
+```
+
+**{}.fromkeys**
+
+Serve para crias as chaves de um dicionário não necessariamente criando os valores vinculados a elas
+```Python
+pessoa.fromkeys(["nome", "idade"])
+pessoas # {"nome":None, "idade":None}
+
+info.fromkeys(["ID", "nome", "idade"], "NoInfo")
+info    # {"ID":"NoInfo", "nome":"NoInfo", "idade":"NoInfo"}
+```
+
+**{}.get**
+
+Serve principalmente para dar um retorno padrão para quando a chave não existe no dicionário
+```Python
+pessoa = {"nome":"Felipe", "idade":19, "sexo":"Masculino"}
+
+pessoa["telefone"] # como não existe KeyError
+
+pessoa.get("telefone")  # None
+#obs.: o retorno padrão da função é None
+
+pessoa.get("telefone", 404)  # 404
+#obs.: retorna o que foi colocado 
+
+pessoa.get("nome")  # "nome":"Felipe"
+#obs.: retorna a chave e o valor, ja que eles existem
+```
+
+**{}.item**
+
+Retorna uma lista de Tuplas
+```Python
+contato = {
+    "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
+    }
+
+contato.item()  #dict_items([("guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"})])
+```
+
+**{}.keys**
+
+Retorna as chaves do dict
+```Python
+contatos = {
+"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+"chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+"melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+contatos.keys() # ([guilherme@gmail.com, giovanna@gmail.com, chappie@gmail.com, melaine@gmail.com])
+```
+
+**{}.pop**
+
+Remove uma chave em expecifico e seu valor, retornando o valor da chave que removeu
+```Python
+contato = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+contato.pop(guilherme@gmail.com)    # {"nome": "Guilherme", "telefone": "3333-2221"}
+
+contato.pop(guilherme@gmail.com, "Valor não encontrado")    # se não encontrar o valor ele ira retornar o que foi colocado, e se não for colocado nada para retornar ele dara um erro
+```
+
+**{}.popitem**
+
+Remove em ordem os items do dicionario
+```Python
+contato = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+contato.popitem()   # {"nome": "Guilherme", "telefone": "3333-2221"}
+
+contato.popitem()   # KeyError
+```
