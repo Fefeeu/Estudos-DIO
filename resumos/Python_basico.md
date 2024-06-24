@@ -3,7 +3,7 @@
 Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 
 ## 📝 Documentação 
--  sintaxes](https://pythoniluminado.netlify.app sintaxe)
+-  sintaxes(https://pythoniluminado.netlify.app sintaxe)
 - [Repositório DIO](https://github.com/digitalinnovationone/trilha-python-dio)
 
 ## Sumário
@@ -833,3 +833,48 @@ nums.remove(1)
 nums    # {2, 3, 4, 5, 6}
 nums.remove(45)    # da erro
 ```
+
+#### Dicionários
+
+Um metodo de organização onde são utilizados pares de informações, onde há uma chave e um valor, e assim como a Tupla os valores são das chaves imutáveis, porem os valores podem ser mutaveis
+
+Ele pode ser criado de forma direta ou pelo chamar da função
+```Python
+pessoa = {"nome":"Felipe", "idade":19}
+
+pessoa = dict(nome = "Felipe", idade = 19)
+
+pessoa  # {"nome":"Felipe", "idade":19}
+
+pessoa["sexo"] = "Masculino"    # adiciona mais uma chave ao dict
+
+pessoa  # {"nome":"Felipe", "idade":19, "sexo":"Masculino"}
+```
+
+Para cessar o valor, no lugar do indice deve-se usar a chave
+```Python
+pessoa = {"nome":"Felipe", "idade":19, "sexo":"Masculino"}
+
+pessoa["nome"]  # "Felipe"
+pessoa["idade"] # 19
+pessoa["sexo"]  # "Masculino"
+
+pessoa["nome"]  # "Mica"
+pessoa["idade"] # 44
+pessoa["sexo"]  # "Feminino"
+
+pessoa  # "nome":"Mica", "idade":44, "sexo":"Feminino"
+``` 
+
+**Dicionários Aninhados**
+
+Dicionários dessa forma são basicamente dicionários, dentro de outros dicionários
+```Python
+contatos = {
+" guilherme@gmail.com ": {"nome": "Guilherme", "telefone": "3333-2221"},
+" giovanna@gmail.com ": {"nome": "Giovanna", "telefone": "3443-2121"},
+" chappie@gmail.com ": {"nome": "Chappie", "telefone": "3344-9871"},
+" melaine@gmail.com ": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+```
+
