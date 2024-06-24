@@ -582,3 +582,254 @@ sorted(lista, key=lambda x: len(x)) #organiza a lista
 
 sorted(lista, key=lambda x: len(x), reverse=True)   #organiza a lista porem invertida 
 ```
+#### Tuplas
+Tuplas são estruturas de dados muito parecidas com as listas, mas a diferença entre elas é que são imutaveis, portanto quando criada não há como alteralas. 
+
+A forma de criação de uma Tupla é quase igual a de uma lista, a unica diferença em uma das formas de criação dela é que listas é criada com [] enquanto a tupla é criada com ().
+
+```Python
+frutas = ("Laranja", "Pera", "Uva",)
+# sim aquela virgula no final é importante para criação da 'Tupla' principalmente se ela for uma Tupla de 1 unico elemento
+
+numeros = tuple([1, 2, 3, 4])
+# pode mandar uma lista para a Tupla
+
+letras = tuple("Python")
+
+pais = ("Brasil",)
+```
+
+Para acesso de dados é exatamente igual a lista.
+```Python
+frutas = ("Laranja", "Pera", "Uva", "Banana",)
+
+frutas[1]   #Pera
+frutas[-3]  #Pera
+```
+
+Também há como criar tuplas de tuplas como exemplo matrizes.
+```Python
+matriz = (
+    ("a", 1, 2,),
+    (3, "b", 4,),
+    (5, 6, "c",),
+)
+
+matriz[0][1]    #1
+matriz[1][1]    #b
+matriz[-2][-1]  #4
+```
+
+**().count**
+
+Conta quantas vezes o valor pedido se repete na Tupla 
+```Python
+cores = ("Azul", "Vermelho", "Verde", "Azul", "Amarelo",)
+
+cores.count("Azul")     # 2
+cores.count("Vermelho") # 1
+```
+
+**().index**
+
+Retorna a posiçãodo item buscado
+```Python
+cores = ("Azul", "Vermelho", "Verde", "Azul", "Amarelo",)
+
+cores.index("Azul")     # 0
+cores.index("Vermelho") # 1
+```
+
+**len()**
+
+Retorna quantos elementos tem na Tupla
+```Python
+cores = ("Azul", "Vermelho", "Verde", "Azul", "Amarelo",)
+
+len(cores)  # 5     
+```
+
+#### Conjuntos
+
+Um 'set' é uma coleção que não possue objetos repetidos, usada para representar conjuntos matemáticos e para retirar item repetidos de um interável.
+
+E assim como Listas e Tuplas existe uma forma de crialo de forma direta, e nesse cadso é com {}
+```Python
+conjunto = {"Python", "Java", "Python", "C++"}
+print(conjunto) # {"Java", "Python", "C++"}
+
+set([1, 2, 2, 3, 4, 4, 5, 5, 5])    #{1, 2, 3, 4, 5}
+
+set("abacaxi")  # {"b", "a", "c", "x", "i"}
+
+set(("palio", "gol", "celta", "palio",))    # {"gol", "celta", "palio"}
+```
+
+***MUITO IMPORTANTE: o set não garente a organização da lista podendo ou não trocar a ordem dela***
+
+'set' não possui indexação, portanto para lidar com um set é preciso colocalo em uma lista
+```Python
+cores = {"Azul", "Vermelho", "Verde", "Azul", "Amarelo"}
+# {"Vermelho", "Verde", "Azul", "Amarelo"
+cores = list(cores)
+
+cores[0]  # Vermelho
+cores[2]  # Azul
+```
+
+Porem há como percorrelo em um for
+```Python
+cores = {"Azul", "Vermelho", "Verde", "Azul", "Amarelo"}
+
+for cor in cores
+    print(cor)
+# Vermelho Verde Azul Amarelo
+```
+
+Assim como conjuntos matemáticos tem forma de fazer operações entre conjuntos
+
+**{}.union**
+
+Faz a união entre 2 conjuntos
+```Python
+numsA = {1, 2}
+numsB = {3, 4}
+
+numsA.union(numsB)  # {1, 2, 3, 4}
+```
+
+**{}.intersection**
+
+Verifica quais objetos estão em comum entre os dois set's
+```Python
+numsA = {1, 2, 3}
+numsB = {2, 3, 4}
+
+numsA.intersection(numsB)   # {2, 3}
+```
+
+**{}.difference**
+
+Verifica quais objetos não estão em comum entre o set pedido
+```Python
+numsA = {1, 2, 3}
+numsB = {2, 3, 4}
+
+numsA.difference(numsB) # {1}
+numsB.difference(numsA) # {4}
+```
+
+**{}.symmetric_difference**
+
+O mesmo que o anterior porem mostrando os dois unidos
+```Python
+numsA = {1, 2, 3}
+numsB = {2, 3, 4}
+
+numsA.symmetric_difference(numsB)   # {1, 4}
+```
+
+**{}.issubset**
+
+Retorna a verificação se o conjunto é subconjunto do outro
+```Python
+numsA = {1, 2, 3}
+numsB = {1, 2, 3, 4, 5, 6, 7}
+
+numsA.issubset(numsB)   # true
+numsB.issubset(numsA)   # false
+```
+
+**{}.issuperset**
+
+Retorna a verificação se o conjunto é subconjunto do outro, porem de forma invertida
+```Python
+numsA = {1, 2, 3}
+numsB = {1, 2, 3, 4, 5, 6, 7}
+
+numsA.issuperset(numsB)   # false
+numsB.issuperset(numsA)   # true
+```
+
+**{}.isdisjoint**
+
+Retorna a verificação se o conjunto é completamente independente do outro
+```Python
+numsA = {1, 2, 3}
+numsB = {4, 5, 6, 7}
+numsC = {0, 1}
+
+numsA.isdisjoint(numsB)   # true
+numsA.isdisjoint(numsC)   # false
+```
+
+**{}.add**
+
+Adiciona um valor ao set se já não existir o mesmo
+```Python
+nums = {1, 40}
+
+nums.add(23)    #{1, 23, 40}
+nums.add(17)    #{1, 17, 23, 40}
+nums.add(64)    #{1, 17, 23, 40, 64}
+nums.add(23)    #{1, 17, 23, 40, 64}
+```
+
+**{}.clear**
+
+Limpa toda o set
+```Python
+nums = {1, 40}
+
+nums    # {1, 40}
+nums.clear()
+nums    # {}
+```
+
+**{}.copy**
+
+Copia todo o set para outro
+```Python
+nums = {1, 40}
+
+nums    # {1, 40}
+nums_B.copy(nums)
+nums_B  # {1, 40}
+```
+
+**{}.discard**
+
+Remove um item especifico do set
+```Python
+nums = {1, 2, 2, 3, 4, 4, 4, 5, 6, 6}
+
+nums    # {1, 2, 3, 4, 5, 6}
+nums.discard(1)
+nums    # {2, 3, 4, 5, 6}
+nums.discard(45)    # se o item não esta no set não muda nada
+nums    # {2, 3, 4, 5, 6}
+```
+
+**{}.pop**
+
+Remove o primeiro item do set
+```Python
+nums = {1, 2, 2, 3, 4, 4, 4, 5, 6, 6}
+
+nums    # {1, 2, 3, 4, 5, 6}
+nums.pop()
+nums.pop()
+nums    # {3, 4, 5, 6}
+```
+
+**{}.remove()**
+
+Remove um item em especifico, porem da erro se for pedido um item que não esta no set 
+```Python
+nums = {1, 2, 2, 3, 4, 4, 4, 5, 6, 6}
+
+nums    # {1, 2, 3, 4, 5, 6}
+nums.remove(1)
+nums    # {2, 3, 4, 5, 6}
+nums.remove(45)    # da erro
+```
