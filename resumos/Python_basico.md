@@ -999,3 +999,33 @@ contato.popitem()   # {"nome": "Guilherme", "telefone": "3333-2221"}
 
 contato.popitem()   # KeyError
 ```
+
+**{}.setdefault**
+
+Se a chave já existir retorna o que esta na chave, se não existir cria a chave e da a ela o valor pedido
+```Python
+contato = {"nome": "Guilherme", "telefone": "3333-2221"}
+
+contato.setdefault("nome", "Felipe")    # Guilherme
+contato # {"nome": "Guilherme", "telefone": "3333-2221"}
+
+contato.setdefaut("idade", 26)  # 28
+contato # {"nome": "Guilherme", "telefone": "3333-2221", "idade":28}
+```
+
+**{}.update**
+
+
+```Python
+contato = {
+    "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
+    }
+
+contato.update("guilherme@gmail.com": {"nome": "Felipe"})   
+contato # {guilherme@gmail.com": {"nome": "Felipe}}
+#se existir a chave atualiza para os novos valores
+
+contato.update("felipe301204@gmail.com": {"nome": "Felipe"})   
+contato # {guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}, felipe301204@gmail.com": {"nome": "Felipe}}
+#se não existir a chave adiciona a nova chave com seus novos valores
+```
