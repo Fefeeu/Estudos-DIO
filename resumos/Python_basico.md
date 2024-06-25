@@ -978,6 +978,20 @@ contatos = {
 contatos.keys() # ([guilherme@gmail.com, giovanna@gmail.com, chappie@gmail.com, melaine@gmail.com])
 ```
 
+**{}.values**
+
+Retorna todos os valores das chaves que o dict
+```Python
+contatos = {
+"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+"chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+"melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+contatos.value() # ([{"nome": "Guilherme", "telefone": "3333-2221"}, {"nome": "Giovanna", "telefone": "3443-2121"}, {"nome": "Chappie", "telefone": "3344-9871"}, {"nome": "Melaine", "telefone": "3333-7766"}])
+```
+
 **{}.pop**
 
 Remove uma chave em expecifico e seu valor, retornando o valor da chave que removeu
@@ -1015,7 +1029,7 @@ contato # {"nome": "Guilherme", "telefone": "3333-2221", "idade":28}
 
 **{}.update**
 
-
+É usado para literalmente atualizar os valores, verificando se o valor não exixtir criando um novo para atualizalo
 ```Python
 contato = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
@@ -1028,4 +1042,22 @@ contato # {guilherme@gmail.com": {"nome": "Felipe}}
 contato.update("felipe301204@gmail.com": {"nome": "Felipe"})   
 contato # {guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}, felipe301204@gmail.com": {"nome": "Felipe}}
 #se não existir a chave adiciona a nova chave com seus novos valores
+```
+
+**in**
+
+Serve para fazer verificação de maneira "bonita" no codigo mas só serve mesmo para verificar se a chave esta no dict
+```Python
+
+contatos = {
+"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+"chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+"melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+"guilherme@gmail.com" in contatos       #true
+"felipe301204@gmail.com" in contatos    #false
+"nome" in contatos[guilherme@gmail.com] #true
+
 ```
