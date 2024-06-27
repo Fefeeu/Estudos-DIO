@@ -1059,5 +1059,96 @@ contatos = {
 "guilherme@gmail.com" in contatos       #true
 "felipe301204@gmail.com" in contatos    #false
 "nome" in contatos[guilherme@gmail.com] #true
-
 ```
+
+**del**
+
+Usado para remover uma chave e por consequência o seu valor do dict
+```Python
+contatos = {
+"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+"chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+"melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+del contatos["guilherme@gmail.com"]["telefone"] # remove a "chave da chave"
+del contatos["melaine@gmail.com"]   # remove toda a chave com todo seu valor
+```
+
+## 📥📤 Funções 
+Funções são blocos de códigos que possuem "nomes"(identificadore) com parametros que podem ser recebidos, e também retornos, em geral usada para códigos recursivos, e para organizar o código em geral.
+
+**Criando uma Função**
+```Python
+def falando_oi():
+    print("Hello World")
+
+def pessoa_falando_oi(nome):
+    print(f"Olá eu sou {nome}")
+
+def pessoa_falando_oi_pronto(nome = "Anônimo"):
+    # Nesse caso o que está acontecendo é que o(s) parametro(s) terão um nome "padrão", onde se não for enviado nada sera usado o declarado anteriormente  
+    print(f"Olá eu sou {nome}")
+```
+Formas de enviar o(s) valor(es) pra função.
+```Python
+def salvar_carro(marca, modelo, ano, palca)
+    print(f"carro criado como: {marca} / {modelo} / {ano} / {placa}")
+
+info1, info2, info3, info4 = input().split()
+info3 = int(info3)
+
+salvar_carro(info1, info2, info3, info4)
+
+salvar_carro(marca = info1, modelo = info2, ano = info3, placa = info4)
+    # A diferença entre os tipos de envio é que nesse caso os parametros são tanto mais organizados quanto não precisam estar na mesma ordem que a esta na função
+
+salvo_carro(**{"marca":info1, "modelo":info2, "ano":info3, "placa":info4})
+```
+
+**Retornando Valores**
+
+Funções em phyton diferente de algumas linguagens de programação permitem o retorno de mais de um valor simultaneamente.
+
+Obs.: por padrão a função é void ou seja retorna 'None'
+
+```python
+def numeros_vizinhos(numero):
+    antecessor = numero - 1
+    sucessor = numero + 1
+
+    return antecessor, sucessor
+
+num = int(input())   # 10
+
+print(numeros_vizinhos(numero = num))   # (9, 11)
+
+
+num1, num2 = numeros_vizinhos(num)
+print(num1, num, num2)  # 9, 10, 11
+```
+
+**args e kwargs**
+
+São formas de declarar Tuplas e Dicionários respectivamente, sendo que por convenção é usado as palavras *args e **kwargs, mas pode ser usado qualquer palavra no lugar delas
+```Python
+def lista_moradores(casa, *args, **kwargs):
+    moradores = ", ".join(args)
+    idade_moradores = ", ".join([f"{chave}: {valor}" for chave, valor in kwargs.items()])
+
+    print(f"A casa {casa} possue {len(args)} moradores de nomes: {moradores}, a qual a idade de cada um é {idade_moradores}")
+
+moradia = "Guaxupé"
+nomes = ("Fefe", "Mica", "Lucas",)
+idades = {"Fefe":19, "Mica":44, "Lucas":45}
+
+lista_moradores(moradia, *nomes, **idades)
+# A casa Guaxupé possue 3 moradores de nomes: Fefe, Mica, Lucas, a qual a idade de cada um é Fefe: 19, Mica: 44, Lucas: 45
+```
+
+**Separando Maneiras de Enviar Parametros**
+
+Como visto anteriormente há diferente maeiras de enviar os parametros para a função sende alguns deles por posição(ordem de entrada), por palavra-chave("kw" = 'valor') e por posição_ou_palavra-chave(qualquer um dos dois)
+
+![Exemplificação](https://imgur.com/Pb8osWH)
