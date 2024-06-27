@@ -1151,4 +1151,4 @@ lista_moradores(moradia, *nomes, **idades)
 
 Como visto anteriormente há diferente maeiras de enviar os parametros para a função sende alguns deles por posição(ordem de entrada), por palavra-chave("kw" = 'valor') e por posição_ou_palavra-chave(qualquer um dos dois)
 
-![Exemplificação](https://imgur.com/Pb8osWH)
+![Exemplificação](https://i.imgur.com/Pb8osWH.png)
