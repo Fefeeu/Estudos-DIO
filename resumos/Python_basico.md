@@ -1152,3 +1152,54 @@ lista_moradores(moradia, *nomes, **idades)
 Como visto anteriormente há diferente maeiras de enviar os parametros para a função sende alguns deles por posição(ordem de entrada), por palavra-chave("kw" = 'valor') e por posição_ou_palavra-chave(qualquer um dos dois)
 
 ![Exemplificação](https://i.imgur.com/Pb8osWH.png)
+
+A ordem como mostrado na imagem em uma função seria antes do '/' só ***posição***, depois do '*' ***palavra-chave***, e o resto seria ambos.
+```Python
+def so_exemplo(posicao1, posicao2, /, ambos1, ambos2, *, palavra_chave1, palavra_chave2):
+    print(posicao1, posicao2, ambos1, ambos2, palavra_chave1, palavra_chave2)
+
+a, b, c, d, e, f = input().split()
+
+so_exemplo(a, b
+           c, ambos2 = d)
+           palavra_chave1 = e, palavra_chave2 = f)
+# Éssa é a maneira correta de se enviar para a função
+```
+
+**Objetos de Primeira Classe**
+
+Objetos de Primeira Classe são objetos que podem ser enviados e retornados por funções, e funções são objetos de primeira classe, inclusive da para dar o valor de uma variavel como uma função.
+
+```Python
+def soma(a, b):
+    return a + b
+
+def modulo(a, b, funcao):
+    resultado = funcao(a, b)    # a funcao 'soma' foi enviada para função módulo porem agora com o nome 'funcao'
+
+    if(resultado >= 0)
+        return resultado
+    elif(resultado < 0)
+        return -resultado
+
+modulo(10, -20, soma)   # |10 - 20| = 10
+
+operacao = soma
+operacao(a, b)  # ele vai literalmente fazer a mesma coisa que a soma.
+```
+
+**Escopo Local e Global**
+
+No Python tem como usar variaveis em um escopo local assim como um escopo global, sendo que o local deixa de existir quando o escopo se encerra.
+
+obs.: se a variavel for global na hora de usala é preciso usar a palavra reservada 'global' para utilizala
+
+```Python
+salario = 2000
+
+def lucro_no_mes (gastos):  # gastos é uma variavel no escopo local portanto ela não existe fora da função
+    global salario
+    return salario - gastos
+
+lucro_no_mes(1500)  # 500
+```
