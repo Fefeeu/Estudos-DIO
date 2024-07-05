@@ -1201,5 +1201,6 @@ def lucro_no_mes (gastos):  # gastos é uma variavel no escopo local portanto el
     global salario
     return salario - gastos
 
-lucro_no_mes(1500)  # 500
+lucro_no_mes(1200)  # 800
 ```
+
