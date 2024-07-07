@@ -21,7 +21,11 @@ Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 | [🔁 Estruturas de Repetição](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-estruturas-de-repetição)  |
 | [✏️ Strign](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-strign)  |
 | [📃 Lista](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-lista) |
-| []() |
+| [📄 Tuplas](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-tuplas) |
+|[🪢 Conjuntos](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-conjuntos)|
+|[🖇️ Dicionários](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#%EF%B8%8F-dicionários)|
+|[📥 Funções](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-funções)|
+||
 
 ## 🚪 Inputs
 ```python
