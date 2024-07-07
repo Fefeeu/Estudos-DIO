@@ -39,7 +39,7 @@ x, y, z = input().split()       #input com multiplas variaveis
 
 int(x)            #converte a variavel para o tipo que deseja nesse caso 'int'
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 
 ## ✏️ Manipulação de Print
 ```python
@@ -54,7 +54,7 @@ print(x, y, z, sep = "o que quiser")    #faz com que a separação das variaveis
 
 print(x, y, z, end = "o que quiser")  #faz com que o final do print seja o que voce quiser, por padrão é "/n"
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 
 ## 🔢 Operadores Aritiméticos
 ```python
@@ -106,7 +106,7 @@ print(x >= y)   #x maior ou igual que y?
 print(x <= y)   #x menor ou igual que y?
 # False
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 
 ## 🟰 Operadores de Atribuição
 ```python
@@ -126,7 +126,7 @@ x //= y #x recebe o valor de x // y
 
 x %= y  #x recebe o valor de x % y
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 
 ## ❔ Operadores Lógicos 
 ```python
@@ -136,7 +136,7 @@ x > y or x == y     #comparação onde uma tem que ser verdadeiras, é o valor l
 
 not x > y           #inverte o valor, exemplo se fosse True retorna False e se for False retorn True
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 🧠 Operadores de Identidade
 São operadores utilizados para comparar se os dois objetos testados ocupam a mesma posição na memória
 ```python
@@ -154,7 +154,7 @@ print(teste is not nome_teste) #verifica se não oculpam a mesma região de mem�
 print(valor_x is valor_y)      #verifica se oculpam a mesma região de memória
 # True
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 🔍 Operadores de Assosiação
 São operadores utilizados para verificar se um objeto está presente em uma sequência.
 ```python
@@ -175,7 +175,7 @@ print("Maçã" not in frutas) #verifica se há String "Maçã" NÃO está presen
 print(200 in valores)       #verifica se o valor '200' está presente na lista de valores 'valores'
 # False
 ```
- ### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+ ### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 🛑 Estruturas Condicionais
 - Condições "se" "se não se" "se não"
 ```python
@@ -198,7 +198,7 @@ else:
 ```python
 x "Suecesso" if (saldo >= saque) else "falha"   #define em uma unica linha os possiveis valores da variavel
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 🔁 Estruturas de Repetição
 - **For**
 
@@ -250,7 +250,7 @@ else:   #mesma coisa do for: else:
             continue    #o 'continue' vai para a proxima execução do for/while
         print(i, end = " ")
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## ✏️ Strign
 - **sintaxes**
 
@@ -340,7 +340,7 @@ print("""
     ##########################
 """) 
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 📃 Lista
 lista como o próprio nome ja explica são lista de variaveis, podendo inclusive diferentemente de outras linguagens terem mais de um tipo de variavel na mesma lista, mas são baicamente vetores infinitos.
 ```python
@@ -591,7 +591,7 @@ sorted(lista, key=lambda x: len(x)) #organiza a lista
 
 sorted(lista, key=lambda x: len(x), reverse=True)   #organiza a lista porem invertida 
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 📄 Tuplas
 Tuplas são estruturas de dados muito parecidas com as listas, mas a diferença entre elas é que são imutaveis, portanto quando criada não há como alteralas. 
 
@@ -658,7 +658,7 @@ cores = ("Azul", "Vermelho", "Verde", "Azul", "Amarelo",)
 
 len(cores)  # 5     
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 🪢 Conjuntos
 
 Um 'set' é uma coleção que não possue objetos repetidos, usada para representar conjuntos matemáticos e para retirar item repetidos de um interável.
@@ -843,7 +843,7 @@ nums.remove(1)
 nums    # {2, 3, 4, 5, 6}
 nums.remove(45)    # da erro
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 🖇️ Dicionários
 
 Um metodo de organização onde são utilizados pares de informações, onde há uma chave e um valor, e assim como a Tupla os valores são das chaves imutáveis, porem os valores podem ser mutaveis
@@ -1085,7 +1085,7 @@ contatos = {
 del contatos["guilherme@gmail.com"]["telefone"] # remove a "chave da chave"
 del contatos["melaine@gmail.com"]   # remove toda a chave com todo seu valor
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
 ## 📥📤 Funções 
 Funções são blocos de códigos que possuem "nomes"(identificadore) com parametros que podem ser recebidos, e também retornos, em geral usada para códigos recursivos, e para organizar o código em geral.
 
@@ -1213,4 +1213,4 @@ def lucro_no_mes (gastos):  # gastos é uma variavel no escopo local portanto el
 
 lucro_no_mes(1200)  # 800
 ```
-### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#-python)
+### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)
