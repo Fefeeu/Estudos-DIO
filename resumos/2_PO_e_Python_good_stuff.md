@@ -112,10 +112,23 @@ print(bike)
 ### Método Construtor / Inicializador 
 O metodo construtor é sempre executado quando uma nova instância da classe é criada. Nesse método inicializamos o estado do nosso Objeto. Para declarar o **método construtor** da classe, criamos um método com o nome __ init __
 
+```Python
+class Cachorro: 
+    def __init__(self, raca, cor):
+        print(f"Iniciando a classe {self.__class__.__name__}")
+        self.raca = raca
+        self.cor = cor
+
+c = Cachorro("camarelo", "amarelo")
+# Iniciando a classe Cachorro
+```
+
 ### **Método Destrutor**
 O metodo destrutor é sempre executado quando uma instância (objeto) é destruida. Destrutores em Python não são tão necessários quanto em C++ já que o Python tem um coloetor de lixo que lida com o gerenciamento de memória automaticamente. Para declarar o método destrutor da classe, criamos um método com o nome __ del __
 
 **__ del __** = Quando ele é utilizado que vai acontecer é: antes de ser deletado o objeto ira realizar o que foi definido na caracteristica
+
+**obs.:** Por conta do __ del __ sempre ser executado quando o objeto é deletado, em alguns momentos dentro do proprio codigo isso vai aconteser, dois exemplos são se eu inicializar o objeto dentro de uma função, quando a função der return, ela vai deletar o objeto, e também quando o código terminar de ser executado.
 ```Python
 class Cachorro: 
     def __init__(self, raca, cor):
