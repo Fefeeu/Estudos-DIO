@@ -316,7 +316,7 @@ print()
 
 Encapsulamento é um dos conseitos fundamentais em POO. Ele descreve a ideia de agrupar dados e os métodos que manipulam essse dados em uma unidade. Isso Impõe restrições ao acesso direto a variáveis e métodos e pode evitar a modificação acidental de dados. Para evitar alterações acidentais, a variável de um objeto só pode ser alterada pelo método desse objeto.
 
-![alt text](https://imgur.com/hjgP2CO)
+![alt text](https://imgur.com/asdasdasd-hjgP2CO)
 
 Esse é um exeplo onde a váriavel *saldo* é encapsulada, ou seja não é possivel altera-la de maneira direta, mas sómente pelos métodos *depositar* e *sacar*
 
