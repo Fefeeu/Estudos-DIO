@@ -179,7 +179,7 @@ class C(A, B):
 ```
 
 ### Exemplo Codigo Herança Simples
-![alt text](opera_xJQZnonW0B.png)
+![alt text](https://imgur.com/4YwozrP)
 
 **super().__ init __(...)** = Essa função é utilizada para puxar as caracteristicas da classe pai, podendo ser com as variaveis literiais ou com o uso de dict.
 
@@ -250,7 +250,7 @@ print(f'{caminhao}\n')
 
 ### Exemplo Codigo Herança Múltipla
 
-![alt text](opera_fEoDTBG43d.png)
+![alt text](https://imgur.com/g5UFuEZ)
 
 **'nome classe'.__ mro __** = essa função retorna a prioridade de execução da classe
 
@@ -316,7 +316,7 @@ print()
 
 Encapsulamento é um dos conseitos fundamentais em POO. Ele descreve a ideia de agrupar dados e os métodos que manipulam essse dados em uma unidade. Isso Impõe restrições ao acesso direto a variáveis e métodos e pode evitar a modificação acidental de dados. Para evitar alterações acidentais, a variável de um objeto só pode ser alterada pelo método desse objeto.
 
-![alt text](opera_IeEMwYPHQl.png)
+![alt text](https://imgur.com/hjgP2CO)
 
 Esse é um exeplo onde a váriavel *saldo* é encapsulada, ou seja não é possivel altera-la de maneira direta, mas sómente pelos métodos *depositar* e *sacar*
 
