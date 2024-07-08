@@ -406,3 +406,45 @@ print(f'Nome: {eu.nome}\nIdade: {eu.idade}')
 # Idade: 20
 ```
 E no final das contas Sim podemos só fazer um def padrão e utliza-lo, porem esse não é muito o padrão da escrita em python
+
+## **Polimorfismo**
+A palavra porlimorfismo significa ter muitas formas. Em programação, polimorfismo significa o mesmo node de função (mas assinaturas diferentes), sendo usado para tipos diferentes.
+
+Um exemplo é o len(). que retorna em diferentes tipos de tipos.
+```Python
+len("Python")       # retorna quantidade de letras
+
+len([10, 20, 30])   # retorna quantidade de itens na lista
+```
+
+### Mesmo método com comportamento diferente
+Na herança, a classe filha herda os métodos da classe pai. No entento, é possivel modificar um método em uma classe filha herdade da classe pai. Isso é particularmente útil nos casos em que o método herdado da classe pai não se encaixa perfeitamente na classe filha.
+```Python
+from ssl import PROTOCOL_TLSv1_2
+
+
+class Passaro:
+    def voar(self):
+        print("Voando...")
+
+class Pardal(Passaro):
+    def voar(self):
+        super().voar()
+
+class Avestruz(Passaro):
+    def voar(self):
+        print("Avestruz não voa")
+
+def plano_de_voo(obj):
+    obj.voar()
+
+
+p1 = Pardal()
+p2 = Avestruz()
+
+plano_de_voo(p1)    # Voando...
+plano_de_voo(p2)    # Avestruz não voa
+
+plano_de_voo(Pardal())      # Voando...
+plano_de_voo(Avestruz())    # Avestruz não voa
+```
