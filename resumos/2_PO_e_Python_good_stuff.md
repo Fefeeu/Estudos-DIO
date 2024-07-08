@@ -405,4 +405,4 @@ print(f'Nome: {eu.nome}\nIdade: {eu.idade}')
 # Nome: Felipe
 # Idade: 20
 ```
-E no final das contas Sim podemos só fazer um def padrão e utlizalo, porem esse não é muito o padrão da escrita em python
+E no final das contas Sim podemos só fazer um def padrão e utliza-lo, porem esse não é muito o padrão da escrita em python
