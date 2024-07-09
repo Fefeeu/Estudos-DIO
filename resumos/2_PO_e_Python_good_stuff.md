@@ -448,3 +448,153 @@ plano_de_voo(p2)    # Avestruz não voa
 plano_de_voo(Pardal())      # Voando...
 plano_de_voo(Avestruz())    # Avestruz não voa
 ```
+
+## **Variáveis de classe e Variáveis de Instância**
+Todos os objetos nascem com o mesmo numero de atributos de classe e de instância. Atributos de instância são diferentes para cada objeto (cada objeto tem uma cópia), já os atributos de classe são compartilhados entre os objetos.
+
+Basicamente Variáveis de Classe são variaveis que não são individuais para cada objeto, elas são globias para todos os objetos do codigo ou seja se eu trocar o valor de uma delas, trocara para todos os objetos ja criados e também aqueles que ainda serão criados.
+
+```Python
+class Estudante:
+    escola = "DIO"  # essa é uma variavel de classe
+
+    def __init__(self, nome, matricula):
+        self.nome = nome
+        self.matricula = matricula
+    
+    def __str__(self):
+        return f"{self.nome} - {self.matricula} - {self.escola}"
+    
+aluno1 = Estudante("Felipe", 535610)
+aluno2 = Estudante("Michelle", 626738)
+
+print(aluno1)
+print(aluno2)
+Estudante.escola = "trocada"    # Assim posso trocar permanentemente uma variavel de classe
+print(aluno1.escola)
+print(aluno2.escola)
+
+aluno3 = Estudante("Lucas", 422334)
+
+print(aluno1)
+print(aluno2)
+print(aluno3)
+```
+
+## **Métodos de classe e Métodos estáticos**
+### Métodos de classe
+Métodos de classe estão ligados à classe e não ao objeto. Eles têm acesso ao estado da classe, pois recebem um parâmetro que aponta para a classe e não para a instância do objeto.
+
+### Métodos estáticos
+Um método estático não recebe um primeiro argumento explícito. Ele também é um método vinculado à classe e não ao objeto da classe. Este método não pode acessar ou modificar o estado da classe. Ele está presente em uma classe piorque faz sentido que o método esteja presente na classe.
+
+### classe X estático
+- Um método de classe recebe um primeirp parâmetro que aponta para a classe, enquanto um método estático não.
+- Um método de classe pode acessar ou modificar o estado da classe enquanto um método estático não pode acessá-lo pi modificá-lo.
+
+### Quando utilizar cada um
+- Geralmente usamos o método de classe para criar métodos de fábrica.
+- Geralmente usamos métodos estáticos para criar funções utilitárias.
+
+### **No Código**
+
+**@classmethod** = É a forma de definir que o método a baixo é um metodo de classe.
+
+**@staticmethod** = É uma forma de "enfeitar" o codigo para diser que o método é estático.
+```Python
+class Pessoa: 
+    def __init__(self, nome, idade, cor_cabelo):
+        self.nome = nome
+        self.idade = idade
+        self.cor_cabelo = cor_cabelo
+    
+    @classmethod
+    def criar_apartir_data_nascimento(cls, nome, dia, mes, ano, cor_cabelo):
+        idade = 2024 - ano
+        return cls(nome, idade, cor_cabelo)
+    
+    @staticmethod
+    def maior_de_idade(idade):
+        return idade >= 18
+    
+    def __str__(self):
+        return F"{self.__class__.__name__}: {', '.join([f'{chave} = {valor}' for chave, valor in self.__dict__.items()])}"
+
+eu = Pessoa.criar_apartir_data_nascimento("felipe", 30, 12, 2004, "preto")
+print(eu)
+print(Pessoa.maior_de_idade(19))
+print(Pessoa.maior_de_idade(10))
+```
+
+## **Classes Abstratas**
+
+### **Interfaces**
+Interfaces definem o que uma classe deve fazer e não como.
+
+O conceito de interface é definir um contrato, onde são declarados os métodos (o que deve ser feito) e suas respectivas assinaturas. Em Python utilizamos classes abstratas para criar contratos. classes abstratas não podem ser instanciadas.
+
+## Criando classes abstratas com o metodo ABC
+*obs.: ABC (Abstract Base Class)*
+
+Por padrão, o Python não fornece classes abstratas. O Python vem com um módulo que fornece a base para definir as classes abstratas, e o nome do módulo é ABC. O ABC funciona decorando métodos da classe base como abstrato e, em seguida, registrando classes concretas como implementações da base abstrata. Um método se torna abstratp quando decorado com **@abstractmethod**
+
+Basicamente assim a classe abstrata obriga o código a seguir suas "regras".
+
+**@abstractmethod** = Define os métodos da classe abstrata
+
+**@abstractproperty** = Define as propriedades da classe abstrata.
+
+```Python
+from abc import ABC, abstractmethod, abstractproperty
+
+class ControleRemoto(ABC):
+    
+    @abstractmethod
+    def ligar(self):
+        pass
+
+    @abstractmethod
+    def desligar(self):
+        pass
+
+    @property
+    @abstractproperty
+    def marca(self):
+        pass
+    
+
+class ControleTV(ControleRemoto):
+    def ligar(self):
+        print("TV ligada")
+    
+    def desligar(self):
+        print("TV desligada")
+
+    @property
+    def marca(self):
+        return "Samsung"
+
+class ControleAr(ControleRemoto):
+    def ligar(self):
+        print("Ar Condicionado ligada")
+    
+    def desligar(self):
+        print("Ar Condicionado desligada")
+
+    @property
+    def marca(self):
+        return "LG"
+    
+controle1 = ControleTV()
+controle2 = ControleAr()
+
+controle1.ligar()
+controle1.desligar()
+print(controle1.marca)
+
+print()
+
+controle2.ligar()
+controle2.desligar()
+print(controle2.marca)
+```
