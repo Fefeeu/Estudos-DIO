@@ -50,4 +50,4 @@ while True:
     elif opcao == "q":
         break
     else:
-        print("Opção inválida! Tente novamente.")-
+        print("Opção inválida! Tente novamente.")
