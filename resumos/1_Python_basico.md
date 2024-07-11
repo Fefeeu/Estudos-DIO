@@ -1214,10 +1214,4 @@ def lucro_no_mes (gastos):  # gastos é uma variavel no escopo local portanto el
 lucro_no_mes(1200)  # 800
 ```
 
-**Pequenas Adições**
-```Python
-derf funcao_generica(variavel):
-    pass    # essa palavra reservada 'pass' faz com que o Python "feche" a funcao
-```
-
 ### [Home](https://github.com/Fefeeu/Estudos-DIO/blob/main/resumos/Python_basico.md#sumário)

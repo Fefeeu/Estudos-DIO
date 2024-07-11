@@ -533,7 +533,7 @@ Interfaces definem o que uma classe deve fazer e não como.
 
 O conceito de interface é definir um contrato, onde são declarados os métodos (o que deve ser feito) e suas respectivas assinaturas. Em Python utilizamos classes abstratas para criar contratos. classes abstratas não podem ser instanciadas.
 
-## Criando classes abstratas com o metodo ABC
+## **Criando classes abstratas com o metodo ABC**
 *obs.: ABC (Abstract Base Class)*
 
 Por padrão, o Python não fornece classes abstratas. O Python vem com um módulo que fornece a base para definir as classes abstratas, e o nome do módulo é ABC. O ABC funciona decorando métodos da classe base como abstrato e, em seguida, registrando classes concretas como implementações da base abstrata. Um método se torna abstratp quando decorado com **@abstractmethod**
@@ -598,3 +598,166 @@ controle2.ligar()
 controle2.desligar()
 print(controle2.marca)
 ```
+
+## **Decoradores**
+### Inner functions
+são funções definidas dentro de outras fuções, são chamadas também de funções internas.
+
+```Python
+def pai():
+    print("escrevendo da pai() função")
+
+    def filho_1():
+        print("Escrevendo da filho_1 função")
+
+    def filho_2():
+        print("Escrevendo da filho_2 função")
+
+    filho_2()
+    filho_1()
+pai()
+```
+Uma forma de utilizar esse tipo de função.
+```Python
+def calcular(operacao):
+    def somar(a, b):
+        return a + b
+
+    def subtrair(a, b):
+        return a - b
+
+    if (operacao == "+"):
+        return somar(a,b)
+    else:
+        return subtrair(a,b)
+
+resultado = clacular("-")(10,8)
+print(resultado)
+    # 2 
+```
+Como é possivel ver acima, da para enviar os valores para mais de uma função, se ela possuir funções internas.
+
+Outra coisa que podemos fazer é retornar uma funcão em outra função.
+
+```Python
+def calculadora(op):
+    def soma(a, b):
+        return a + b
+    def sub(a, b):
+        return a - b
+    def mult(a, b):
+        return a * b
+    def div(a, b):
+        return a / b
+
+    match op:
+        cases "+":
+            return soma
+        cases "-":
+            return sub
+        cases "*":
+            return mult
+        cases "/":
+            return div
+
+operacao = calculadora("+")
+print(operacao(5,6))  # 11
+
+operacao = calculadora("-")
+print(operacao(5,6))  # -1
+``` 
+
+## **decorador simples**
+
+Usamos decoradores para colocar mais comportamentos dentro de outras funções.
+
+```Python
+def meu_decorador(funcao):
+    def envelope():
+        print("Faz algo antes de executar a funcao")
+        funcao()
+        print("Faz algo depois de executar a funcao")
+
+    return envelope
+
+def ola_mundo():
+    print("Hello World!")
+
+ola_mundo()
+print()
+
+ola_mundo = meu_decorador(ola_mundo)
+ola_mundo()
+```
+
+### Açúcar sintático
+O Python permite que você use **decoradores de maneira mais simples com o símbolo @**.
+
+
+Mesmo exemplo de cima.
+```Python
+def meu_decorador(funcao):
+    def envelope():
+        print("Faz algo antes de executar a funcao")
+        funcao()
+        print("Faz algo depois de executar a funcao")
+
+    return envelope
+
+@meu_decorador
+def ola_mundo():
+    print("Hello World!")
+
+# não é mais preciso a linha de atribuição a funcao (ola_mundo = meu_decorador(ola_mundo))
+
+ola_mundo()
+```
+
+### **Funões de decoração com argumentos**
+Podemos usar *args e **kwargs na função interna, com isso ela aceitará um número arbitrário de argumentos posicionais e de palavras-chave.
+```Python
+def duplicar(funcao):
+    def envelope(*args, **kwargs):
+        print("Executa primeira vez:")
+        funcao(*args, **kwargs)
+        print("Executa uma segunda vez:")
+        funcao(*args, **kwargs)
+    return envelope
+
+@duplicar
+def aprendendo(tecnologia):
+    print(f"Eu estou aprendendo {tecnologia}")
+
+aprendendo("Python")
+```
+
+### **retornando valores de funções decoradas**
+
+O decorardor pode decidir se retorna o valor da função decorada ou não, Para que o valor seja retornado a função de **envelope** deve retornar o valor da finção decorada.
+
+```Python
+def duplicar(funcao):
+    def envelope(*args, **kwargs):
+        print("Executa primeira vez:")
+        funcao(*args, **kwargs)
+        print("Executa uma segunda vez:")
+        resultado = funcao(*args, **kwargs)
+        
+        return resultado
+
+    return envelope
+
+@duplicar
+def aprendendo(tecnologia):
+    print(f"Eu estou aprendendo {tecnologia}")
+    return tecnologia.upper()
+
+tecnologia = aprendendo("Python")
+print("\n",tecnologia)
+```
+### **Intropecção**
+introspecção é a capacidade de um objeto saber sobre seus próprios atributos em tempo de execução 
+
+Da forma que foi programado acima, quando pefirmos as "informações" da função, sua **Introspecção** sera comprometida:
+
+![alt text](https://i.imgur.com/KoqCXZz.png)
