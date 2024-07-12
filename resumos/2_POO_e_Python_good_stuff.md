@@ -12,7 +12,7 @@ Uma ***classes*** define as características e comportamentos de um ***objeto***
 
 ***Classes*** são partes mais abstratas 
 
-## **Criando uma Classe e Objeto**
+## Criando uma Classe e Objeto
 
 **__ init __** = Inicializador 
 
@@ -107,9 +107,9 @@ print(bike)
 
 ```
 
-## **Construtores e Destruidores**
+## Construtores e Destruidores
 
-### **Método Construtor / Inicializador**
+### Método Construtor / Inicializador
 O metodo construtor é sempre executado quando uma nova instância da classe é criada. Nesse método inicializamos o estado do nosso Objeto. Para declarar o **método construtor** da classe, criamos um método com o nome __ init __
 
 ```Python
@@ -123,7 +123,7 @@ c = Cachorro("camarelo", "amarelo")
 # Iniciando a classe Cachorro
 ```
 
-### **Método Destrutor**
+### Método Destrutor
 O metodo destrutor é sempre executado quando uma instância (objeto) é destruida. Destrutores em Python não são tão necessários quanto em C++ já que o Python tem um coloetor de lixo que lida com o gerenciamento de memória automaticamente. Para declarar o método destrutor da classe, criamos um método com o nome __ del __
 
 **__ del __** = Quando ele é utilizado que vai acontecer é: antes de ser deletado o objeto ira realizar o que foi definido na caracteristica
@@ -144,7 +144,7 @@ del c
 # Deletando o objeto de classe Cachorro
 ```
 
-## **Herança em POO**
+## Herança em POO
 Em programação herança é a capacidade de uma classe filha derivar ou herdar as caracteristicas e comportamentos da classe pa(base).
 
 ### Beneficios:
@@ -154,7 +154,7 @@ Em programação herança é a capacidade de uma classe filha derivar ou herdar 
 
 - É de natureza transitiva, o que significa que, se a classe B herdar da classe A, todas as subclasses de B herdarão automaticamente da classe A também.
 
-### **Código Base**
+### Código Base
 ```Python
 class A:
     pass
@@ -163,7 +163,7 @@ class B(A):
     pass    # a classe B herda a classe A
 ```
 
-### **Herança Simples e Múltiplas**
+### Herança Simples e Múltiplas
 A simples é a padrão como o exemplo de cima
 
 Herança múltipla é quando uma classe filha herda várias classes pai.
@@ -312,7 +312,7 @@ print(perry)
 print()
 ```
 
-## **Encapsulamento em POO**
+## Encapsulamento em POO
 
 Encapsulamento é um dos conseitos fundamentais em POO. Ele descreve a ideia de agrupar dados e os métodos que manipulam essse dados em uma unidade. Isso Impõe restrições ao acesso direto a variáveis e métodos e pode evitar a modificação acidental de dados. Para evitar alterações acidentais, a variável de um objeto só pode ser alterada pelo método desse objeto.
 
@@ -322,10 +322,10 @@ Esse é um exeplo onde a váriavel *saldo* é encapsulada, ou seja não é possi
 
 obs.: o sinal de **'-'** simboliza que o metodo/variavel é restrito enquanto o sinal de **'+'** simboliza que é "publico"
 
-### **Recursos Públicos e Privados**
+### Recursos Públicos e Privados
 Em linguagens como Java e C++, existem palavras reservadas para definir o nível de acesso aos atributos e métpdps da classe. Já em **Python não exitem palavras reservadas para isso**, porém usamos **convenções** no nome do recurso, para definir se a váriavel é pública ou privada.
 
-### ***Definição:***
+### Definição:
 - **Público:** Pode ser acessado fora da classe.
 - **Privado:** Só pode ser acessado pela classe.
 
@@ -351,7 +351,7 @@ Como é possivel ver eu posso mudar o valor de 'saldo' de qualquer forma mesmo n
 
 **ENTÂO RESPEITA O '_'!!!!**
 
-## **Propriedades**
+## Propriedades
 Com o property() do Python, você pode criar atributos gerenciados em suas classes. Você pode usar atributos gerenciados, também conhecidos como propriedades, quando precisar modificar sua implementação interna sem alterar a API pública da classe.
 
 **@property** = Basicamente tranforma um metodo em um atributo ou seja, agora pode-se usar o metodo com uma sintaxe de atributo
@@ -407,7 +407,7 @@ print(f'Nome: {eu.nome}\nIdade: {eu.idade}')
 ```
 E no final das contas Sim podemos só fazer um def padrão e utliza-lo, porem esse não é muito o padrão da escrita em python
 
-## **Polimorfismo**
+## Polimorfismo
 A palavra porlimorfismo significa ter muitas formas. Em programação, polimorfismo significa o mesmo node de função (mas assinaturas diferentes), sendo usado para tipos diferentes.
 
 Um exemplo é o len(). que retorna em diferentes tipos de tipos.
@@ -449,7 +449,7 @@ plano_de_voo(Pardal())      # Voando...
 plano_de_voo(Avestruz())    # Avestruz não voa
 ```
 
-## **Variáveis de classe e Variáveis de Instância**
+## Variáveis de classe e Variáveis de Instância
 Todos os objetos nascem com o mesmo numero de atributos de classe e de instância. Atributos de instância são diferentes para cada objeto (cada objeto tem uma cópia), já os atributos de classe são compartilhados entre os objetos.
 
 Basicamente Variáveis de Classe são variaveis que não são individuais para cada objeto, elas são globias para todos os objetos do codigo ou seja se eu trocar o valor de uma delas, trocara para todos os objetos ja criados e também aqueles que ainda serão criados.
@@ -481,7 +481,7 @@ print(aluno2)
 print(aluno3)
 ```
 
-## **Métodos de classe e Métodos estáticos**
+## Métodos de classe e Métodos estáticos
 ### Métodos de classe
 Métodos de classe estão ligados à classe e não ao objeto. Eles têm acesso ao estado da classe, pois recebem um parâmetro que aponta para a classe e não para a instância do objeto.
 
@@ -496,7 +496,7 @@ Um método estático não recebe um primeiro argumento explícito. Ele também �
 - Geralmente usamos o método de classe para criar métodos de fábrica.
 - Geralmente usamos métodos estáticos para criar funções utilitárias.
 
-### **No Código**
+### No Código
 
 **@classmethod** = É a forma de definir que o método a baixo é um metodo de classe.
 
@@ -526,14 +526,14 @@ print(Pessoa.maior_de_idade(19))
 print(Pessoa.maior_de_idade(10))
 ```
 
-## **Classes Abstratas**
+## Classes Abstratas
 
-### **Interfaces**
+### Interfaces
 Interfaces definem o que uma classe deve fazer e não como.
 
 O conceito de interface é definir um contrato, onde são declarados os métodos (o que deve ser feito) e suas respectivas assinaturas. Em Python utilizamos classes abstratas para criar contratos. classes abstratas não podem ser instanciadas.
 
-## **Criando classes abstratas com o metodo ABC**
+## Criando classes abstratas com o metodo ABC
 *obs.: ABC (Abstract Base Class)*
 
 Por padrão, o Python não fornece classes abstratas. O Python vem com um módulo que fornece a base para definir as classes abstratas, e o nome do módulo é ABC. O ABC funciona decorando métodos da classe base como abstrato e, em seguida, registrando classes concretas como implementações da base abstrata. Um método se torna abstratp quando decorado com **@abstractmethod**
@@ -599,7 +599,7 @@ controle2.desligar()
 print(controle2.marca)
 ```
 
-## **Decoradores**
+## Decoradores
 ### Inner functions
 são funções definidas dentro de outras fuções, são chamadas também de funções internas.
 
@@ -667,7 +667,7 @@ operacao = calculadora("-")
 print(operacao(5,6))  # -1
 ``` 
 
-## **decorador simples**
+## decorador simples
 
 Usamos decoradores para colocar mais comportamentos dentro de outras funções.
 
@@ -713,7 +713,7 @@ def ola_mundo():
 ola_mundo()
 ```
 
-### **Funões de decoração com argumentos**
+### Funões de decoração com argumentos
 Podemos usar *args e **kwargs na função interna, com isso ela aceitará um número arbitrário de argumentos posicionais e de palavras-chave.
 ```Python
 def duplicar(funcao):
@@ -731,7 +731,7 @@ def aprendendo(tecnologia):
 aprendendo("Python")
 ```
 
-### **retornando valores de funções decoradas**
+### retornando valores de funções decoradas
 
 O decorardor pode decidir se retorna o valor da função decorada ou não, Para que o valor seja retornado a função de **envelope** deve retornar o valor da finção decorada.
 
@@ -755,9 +755,146 @@ def aprendendo(tecnologia):
 tecnologia = aprendendo("Python")
 print("\n",tecnologia)
 ```
-### **Intropecção**
+### Intropecção
 introspecção é a capacidade de um objeto saber sobre seus próprios atributos em tempo de execução 
 
 Da forma que foi programado acima, quando pefirmos as "informações" da função, sua **Introspecção** sera comprometida:
 
 ![alt text](https://i.imgur.com/KoqCXZz.png)
+
+```Python
+import functools
+
+def duplicar(funcao):
+    @functools.wraps(funcao)
+    def envelope(*args, **kwargs):
+        print("Executa primeira vez:")
+        funcao(*args, **kwargs)
+        print("Executa uma segunda vez:")
+        resultado = funcao(*args, **kwargs)
+        
+        return resultado
+
+    return envelope
+
+@duplicar
+def aprendendo(tecnologia):
+    print(f"Eu estou aprendendo {tecnologia}")
+    return tecnologia.upper()
+
+print(print)
+print(print.__name__)
+print()
+print(aprendendo)
+print(aprendendo.__name__)
+
+# ==================== SAIDA ====================
+# <built-in function print>
+# print
+
+# <function aprendendo at 0x00000189EE189B20>
+# aprendendo
+```
+
+## Interadores e Geradores
+Esses são conceitos poderosos que nos permitem trabalhar com sequências de maneira eficiente.
+
+### Interáveis
+Interaveis são todos os tipos de variaveis que possum uma sequencia de valores, exmplos: listas, linhas de um arquivo de texto, sequencia de caracters, etc.
+
+### Iterador
+Em Python, um interador é um obheto que contem um nimero contavel de valores que podem ser iterados, o que sugnifica que voce pode percorrer todos os valores. O protocolo do iterador é uma maneira do Python fazer a interação de um objeto, que consiste em dois métodos especiais "__ ite __() " e " __ next __()".
+
+Um exemplo de uso é **Ler arquivos grandes**
+
+Exemplo código:
+ É dado uma lista e retorna essa mesma lista porem com os valores dobrados
+
+ **raise StopIteration** = é uma linha  obrigatoria, pois informa ao compilador que foi terminado a interação
+
+```Python
+class MeuInterator:
+    def __init__(self, numeros:list[int]):
+        self.numeros = numeros
+        self.contador = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        tamanho = len(self.numeros)
+        if (self.contador < tamanho):    
+            numero = self.numeros[self.contador] * 2
+            self.contador += 1
+            return numero
+        else:
+            raise StopIteration
+
+for i in MeuInterator(numeros = [1, 2, 3, 4, 5]):
+    print(i)
+
+# 2, 4, 6, 8, 10
+```
+
+### Geradores
+São tipos especiais de interadores, ao contrário das listas ou outros interáveis, não armazenam todos os seus valores na memória. 
+
+São definidos usando funções regulares, mas, ao invés de retornar valores usando "return", utilizam "yield"
+
+### Características de geradores 
+- Uma vez que um item gerado é consumido, ele é esquecido e não pode ser acessado novamente.
+- O estado interno de um gerador é mantido entre chamadas.
+- A execução de um gerador é pausada na declaração "yield" e retomada daí na próxima vez que ele for chamado.
+
+#### Um exemplo:
+##### Recuperando dados de uma API
+- Solicitar dados por páginas (paginação)
+- Fornece um produto por vez entre as chamadas.
+- Quando todos os produtos de uma página forem retornados, verificar se existem novas páginas.
+- Tratar o consumo da API como uma lista Python.
+
+```Python
+import requests
+
+def fatch_products(api_url, max_pages = 100):
+    page = 1
+    while page <= max_page:
+        response = requests.get(f"{api_url}?page={page}")
+        data = response.json()
+        for product in data['products']:
+            yield product
+        if 'next_page' not in data:
+            break
+        page += 1
+
+# uso do gerador
+for product in fetch_products("https://api.example.com/products"):
+    print(product['name'])
+```
+
+#### Outro exemplo extremamente mais básico
+
+```Python
+def meu_gerador()
+    yield "texto"
+
+for i in meu_gerador()
+print(i)
+```
+
+#### Mesmo exemplo do interador
+```Python
+def meu_interator(numeros:list[int]):
+    for numero in numeros:
+        yield numero * 2 
+
+for i in meu_gerador(numeros = [1, 2, 3]):
+    print(i)
+```
+
+### Quando usar cada um
+
+Gerador:
+***Um código mais simples, e/ou mais optimizada:***
+
+interador: ***Um código mais complexo (ex: arvore binaria)***
