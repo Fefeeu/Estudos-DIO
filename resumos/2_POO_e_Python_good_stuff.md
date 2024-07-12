@@ -4,6 +4,11 @@
 |-------|
 ||
 
+## 📝 Documentação 
+-  [sintaxes](https://pythoniluminado.netlify.app)
+- [Repositório DIO](https://github.com/digitalinnovationone/trilha-python-dio)
+-  [Python.org](https://docs.python.org/3/)
+
 # Programação Orientada a Objetos
 ## O que é?
 O paradigma de programação orientada a objetos estrutura o código abstraindo problemas em objetos do mundo real, facilitando o entendimento do código e tornando-o mais modular e extensível. Os dois conceitos chaves para aprenser POO são: **Classes** e **Objetos**.
@@ -898,3 +903,15 @@ Gerador:
 ***Um código mais simples, e/ou mais optimizada:***
 
 interador: ***Um código mais complexo (ex: arvore binaria)***
+
+## Lidando com Data, Hora e Fuso horário
+### Módulo datetime
+O módulo 'detetime' em Python é usado para lidar com datas e horas. Ele possui várias classes úteis como date, time e timedelta.
+```Python
+import datetime
+
+data = datetime.date(2004, 12, 30)
+
+print(data)
+# 2004-12-30
+```

@@ -5,6 +5,7 @@ Area dedicada a comandos, sintexes, utilidades, etc. Do Python
 ## 📝 Documentação 
 -  [sintaxes](https://pythoniluminado.netlify.app)
 - [Repositório DIO](https://github.com/digitalinnovationone/trilha-python-dio)
+-  [Python.org](https://docs.python.org/3/)
 
 ## Sumário
 |               | 
