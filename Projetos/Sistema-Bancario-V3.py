@@ -10,7 +10,7 @@ class Transacao(ABC):
     def registrar(self, conta):
         pass
 
-class Deposito:
+class Deposito(Transacao):
     def __init__(self, valor):
         self._valor = valor
 
