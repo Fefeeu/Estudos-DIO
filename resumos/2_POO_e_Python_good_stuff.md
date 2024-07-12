@@ -907,11 +907,126 @@ interador: ***Um código mais complexo (ex: arvore binaria)***
 ## Lidando com Data, Hora e Fuso horário
 ### Módulo datetime
 O módulo 'detetime' em Python é usado para lidar com datas e horas. Ele possui várias classes úteis como date, time e timedelta.
+### DATA
 ```Python
 import datetime
 
-data = datetime.date(2004, 12, 30)
+ano = 2024
+mes = 7
+dia = 12
+
+data = datetime.date(ano, mes, dia)
 
 print(data)
-# 2004-12-30
+# 2024-07-12
+
+data = datetime.date.today()
+print(data)
+# (DATA DE HOJE)
+```
+### HORA
+```Python
+import datetime
+
+hora = 14
+minuto = 44
+segundo = 17
+microsegundo = 15323
+
+hora = datetime.time(hora, minuto, segundo, microsegundo)
+
+print(time)
+# 14:44:17.15323
+
+data = datetime.date.today()
+print(data)
+# (HORA DE AGORA)
+```
+### DATA E HORA
+```Python
+import datetime
+
+ano = 2024
+mes = 7
+dia = 12
+hora = 14
+minuto = 39
+segundo = 53
+microsegundo = 12322
+fold = [0, 1]
+
+data_e_hora = datetime.datetime(ano, mes, dia, hora, minuto, segundo, microsegundo, fold)
+
+print(data_e_hora)
+# 2024-07-12 14:39:53.12322
+
+print(data_e_hora.time())   # somente hora
+# 14:39:53.12322
+
+print(data_e_hora.date())   # somente data
+# 2024-07-12
+
+data = datetime.datetime.today()
+print(data)
+# (DATA E HORA DE AGORA)
+```
+
+## Manipulação do objeto date, time e datetime
+### Soma e Subtração de "tempos"
+```Python
+import datetime
+
+data = datetime.datetime(2024, 7, 12, 14, 48)
+print(data)
+# 2024-7-12 14:48:00
+
+data += datetime.timedelta(weeks=1)
+print(data)
+# 2024-7-19 14:48:00
+```
+
+### Soma e Subtração de DATAS
+```Python
+import datetime
+
+data = datetime.datetime.now()
+data2 = datetime.datetime.now() + datetime.timedelta(weeks=1)
+
+data_resultante = data2 - data
+print(data_resultante)
+# 7 days, 0:00:00
+```
+
+### Converção e Formatação de data e hora
+Usamos para fazer essas converções os métodos 'strftime' (string format time) e 'strptime' (string parse time)
+
+```Python
+import datetime
+
+data = datetime.datetime.now()
+
+data_convertida = data.strftime("%d/%m/%Y %H:%M")   # converte para a forma que você quer
+print(data_convertida)
+# 12/07/2023 15:42
+
+data_string = "12/07/2023 15:42"
+data = datetime.datetime.strptime(data_string, "%d/%m/%Y %H:%M")    # coneverte novamente ao formato padrão
+print(data)
+# 2023-07-12 15:42:00
+```
+
+## Trabalhando com timezone
+obs.: ```datetime.utcnow()``` é um comando do proprio datetime para retornar o horario UTC
+
+Trabalhando com datas e horas é comum a necessidade de usar fuso horário. Para isso usamos ```import pytz```
+
+Se não rodar tem que fazer um ambiente virtual(não entendi muito bem mesmo)
+
+```Python
+import datetime
+import pytz
+
+data = datetime.datetime.now(pytz.timezone("Europe/Oslo"))
+
+print(data) 
 ```
