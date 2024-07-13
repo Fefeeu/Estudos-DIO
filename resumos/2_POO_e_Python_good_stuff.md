@@ -1081,4 +1081,11 @@ pipenv install numpy
 pipenv unistall numpy
 
 pipenv lock
+
+pipenv graph    # lista todas as depencias de uma biblioteca
 ```
+file:///C:/Users/felip/Videos/Captures/DIO%20_%20Codifique%20o%20seu%20futuro%20global%20agora%20-%20Opera%202024-07-13%2018-18-45.mp4
+
+### Gerenciando dependências com Poetry
+existe essa outra forma "concorrente" do pipenv não fui muito atras dela pq só queria entender o que eu estava fazendo, mas estou escrevendo isoo pq **Aparentemente o Poetry é melhor na questão de utilização** do que o pipenv
+
