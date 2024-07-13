@@ -7,6 +7,7 @@
 ## 📝 Documentação 
 -  [sintaxes](https://pythoniluminado.netlify.app)
 - [Repositório DIO](https://github.com/digitalinnovationone/trilha-python-dio)
+- [PyPI](https://pypi.org)
 -  [Python.org](https://docs.python.org/3/)
 
 # Programação Orientada a Objetos
@@ -1015,7 +1016,7 @@ print(data)
 # 2023-07-12 15:42:00
 ```
 
-## Trabalhando com timezone
+### Trabalhando com timezone
 obs.: ```datetime.utcnow()``` é um comando do proprio datetime para retornar o horario UTC
 
 Trabalhando com datas e horas é comum a necessidade de usar fuso horário. Para isso usamos ```import pytz```
@@ -1029,4 +1030,55 @@ import pytz
 data = datetime.datetime.now(pytz.timezone("Europe/Oslo"))
 
 print(data) 
+```
+
+## Gerenciamento de pacotes, conveções e boas praticas com Python
+### Pacotes
+Pacotes são módulos que podem ser instalados e utilizados em seus programas Python. Eles permitem que você utilize código que foi escrito por outras pessoas, economizando tempo e esforço.
+### O papel do pip
+Pip é o gerenciador de pacotes do Python. Ele nos permite instalar, atualizar e remover pacotes facilmente. Ele se comunica com o [PyPI](https://pypi.org) (Python Package Index), que é onde a maioria dos pacotes Python são armazenados.
+
+```Batchfile
+pip install numpy       # Instala um pacote/biblioteca na sua versão Python que esta ativa no ambiente
+
+pip uninstall numpy     # Deleta o pacote/biblioteca
+
+pip list    # Mostra todos os pacote/biblioteca instalados
+```
+
+### Uso de ambientes virtuais
+Ambientes virtuais, como os criafos por venvs, nos permitem manter as dependências de diferentes projetos, isso é importante para evitar conflitos entre versoes de pacotes.
+
+#### Criando uma maquina virtual de Python
+obs.: Normalmente o 'nome' é o nome do projeto que esta sendo feito na quela maquina 
+```CMD
+python3 -m venv 'nome'env   
+source myenv/bin/activate
+
+pip deactivate  # desativa o ambiente virtual
+```
+
+### Comandos do pip
+```Batchfile
+pip install nome_do_pacote              # instala o pacote no ambiente
+
+pip unistall nome_do_pacote             # deleta o pacote no ambiente
+
+pip list                                # lista todos os instalados no ambiente
+
+pip install --upgrade nome_do_pacote    # atualiza o pacote
+```
+
+### Gerenciando dependências com Pipenv
+Pipenv é uma ferramenta de gernciamento de pacotes que combina a gestão de dependências com a criação de ambiente virtual para seus projetos e adiciona/remove pacotes autokmaticamente do arquivo Pipfile conforme você instala e desinstala pacotes.
+
+**INSTALE O PIPENV NA MAQUINA PARA FUNCIONAR DE MANEIRA GLOBAL EM TODAS AS MAQUINAS VIRTUAIS**
+```Batchfile
+pip install pipenv
+
+pipenv install numpy
+
+pipenv unistall numpy
+
+pipenv lock
 ```
