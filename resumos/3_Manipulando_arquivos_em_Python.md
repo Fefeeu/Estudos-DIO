@@ -178,3 +178,41 @@ except IOError:
 ```
 
 ## Trabalhando com arquivos CSV
+CSV, um formato de arquivo amplamente utilizado para armazenar dados tabulares. CSV é a sigla para (Comma Saparated Values).
+
+Python fornece um módulo chamado ```csv``` para lidar facilmente com arquivos CSV.
+```Python
+import csv
+from pathlib import Path
+
+ROOT_PATH = Path(__file__).parent
+
+try:
+    with open(ROOT_PATH / "arquivo.csv", "r") as arquivo:
+        reader = csv.reader(arquivo)    # vai linha a linha no arquivo
+
+except IOError:
+    print("Não foi possivel abrir o arquivo")
+```
+
+```Python
+import csv
+
+with open("exemple.csv", "w", newline="") as arquivo:
+    escritor = csv.writer(arquivo)
+    escritor.writerow(["nome", "idade"])
+    escritor.writerow(["Fefe", 19])
+    escritor.writerow(["Michelle", 44])
+with open("exemple.csv", "w", encoding="utf-8") as arquivo:
+    leitor = csv.reader(arquivo)
+    for row in leitor:
+        print(row)
+        #   ["nome", "idade"]
+        #   ["Fefe", 19]
+        #   ["Michelle", 44]
+```
+
+## Praticas recomendadas 
+- Uasr csv.reader e csv.writer para manipular arquivos CSV.
+- Fazer o tratamento correto das exeções.
+- Ao gravar arquivos CSV definir o argumento newline="" no método ```open```.
